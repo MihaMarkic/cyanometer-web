@@ -1,0 +1,512 @@
+#cyan-display {
+}
+
+#cyan-info {
+  padding: 50px 120px 50px 120px;
+  text-align: center;
+  color: #427491;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cyan-display-main {
+  position: relative;
+  width: 100%;
+  height: 675px;
+  background-size: 1200px 675px;
+}
+
+.cyan-display-main.landing-image {
+  position: relative;
+  height: 600px;
+}
+.cyan-display-main.landing-image:hover {
+  /*border: 1px solid white;*/
+  cursor: pointer;
+}
+
+.cyan-display-main.landing-image:hover .time {
+  /*transition: all .1s linear;*/
+  /*font-weight: bold;*/
+  text-shadow: -1px 1px 20px #fff, 1px -1px 20px #fff;
+  -webkit-transition: text-shadow 250ms linear 0s;
+  -moz-transition: text-shadow 250ms linear 0s;
+  -o-transition: text-shadow 250ms linear 0s;
+  transition: text-shadow 250ms linear 0s;
+}
+
+.cyan-display-main.landing-image {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+.cyan-display-main.landing-image:hover {
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+  z-index: 99;
+}
+
+.cyan-display-main .time {
+  position: absolute;
+  top: 7%;
+  left: 4%;
+  font-size: 21pt;
+  line-height: 24pt;
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.cyan-display-main .archive {
+  position: absolute;
+  bottom: 7%;
+  left: 4%;
+  font-size: 21pt;
+  line-height: 24pt;
+  color: white;
+  text-align: left;
+}
+
+.cyan-display-main .archive a, .cyan-display-main .archive a:visited {
+  color: white;
+  font-weight: normal;
+}
+
+.cyan-display-main.landing-image .time {
+  left: 10%;
+}
+
+.cyan-display-main .blueness {
+  position: absolute;
+  top: 7%;
+  right: 4%;
+  font-size: 21pt;
+  /*letter-spacing: 25px*/
+  line-height: 24pt;
+  color: white;
+  text-align: right;
+}
+
+.debug ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.debug.meta {
+  visibility: hidden;
+  position: absolute;
+  width: 20%;
+  font-size: 12px;
+  margin-left: 0px;
+  background-color: white;
+  top: 0px;
+  left: 0px;
+}
+
+.debug.colour {
+  position: absolute;
+  width: 12%;
+  top: 0px;
+  right: 0px;
+  font-size: 12px;
+  z-index: 100;
+
+}
+
+.debug.colour .blueness-swatch {
+  /*border: 1px solid red;*/
+  font-size: 12px;
+  color: black;
+}
+
+.debug.meta img {
+  margin: auto;
+  width: 50px;
+  height: 28px;
+}
+
+#thumbnails-wrapper {
+  padding: 40px 0px 40px 0px;
+  border: 0px solid red;
+}
+
+/* the implicit column */
+.thumbnail-wrapper {
+  /*border: 1px solid red;*/
+}
+
+/* the actual images */
+.thumbnail {
+  position: relative;
+  /*background-color: #ccc;*/
+  /*border: 1px solid orange;*/
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 178px 100px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.thumbnail .time {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.thumbnail:last-of-type {
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+section.about {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+section.about p {
+  padding: 80px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+section.about .more{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+section.about-image {
+  background-color: #D5D5D5;
+}
+
+section.about-image p {
+  padding: 80px;
+  padding-top: 68px;
+}
+
+
+/* Enviromental Data*/
+
+#cyan-environmental-data {
+  background-color: #D5D5D5;
+  margin-top: 0px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+#cyan-environmental-data svg {
+  /*border: 1px solid red;*/
+  padding-top: 0px;
+  margin-top: -80px;
+}
+
+#cyan-environmental-data circle {
+  stroke-width: 10px;
+}
+
+#air-pollution-index {
+  background-color: #D5D5D5;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#air-pollution-index .section-title {
+  padding-bottom: 0px;
+}
+
+#air-pollution-index .ap-caveat {
+  margin-top: 50px;
+  font-size: 14pt;
+  line-height: 28pt;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+#ap-index-wrapper {
+  padding-left: 25%;
+  padding-right: 25%;
+  /*border: 1px solid red;*/
+}
+
+#air-pollution-index .ap-index-colour {
+  min-height: 30px;
+  /*width: 15%;*/
+  border: 0px solid red;
+}
+
+.green {
+  background-color: #72B22F;
+}
+.yellow {
+  background-color: #FEF10D;
+}
+.orange {
+  background-color: #F17E19;
+}
+.red {
+  background-color: #E4001C;
+}
+
+#cyan-measurements-wrapper {
+  background-color: #D5D5D5;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#cyan-measurements-wrapper p {
+  padding-top: 30px;
+}
+
+#cyan-measurements {
+}
+
+.measurements-link {
+  text-transform: uppercase;
+}
+
+table {
+  text-transform: uppercase;
+  font-size: 16pt;
+  /*letter-spacing: 25px*/
+  line-height: 28pt;
+}
+
+tr {
+  background-color: #DFDFDF;
+}
+
+tr.spacer {
+  background-color: #D5D5D5;
+  height: 20px;
+}
+
+td.table-icon {
+  text-align: center;
+  /*border: 1px solid red;*/
+}
+
+td.table-icon img {
+  margin: 0px auto;
+  width: 160px;
+
+}
+
+td.concentration {
+  text-transform: lowercase;
+}
+
+.measurements-caveat {
+  font-size: smaller;
+  text-align: left;
+}
+
+.right-border {
+  border-right: 2px solid black;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+/* END Enviromental Data*/
+
+#credits {
+  padding-top: 20px;
+  padding-bottom: 0px;
+  font-size: 13pt;
+  /*letter-spacing: 25px*/
+  line-height: 23pt;
+}
+
+#credits .section-title {
+  font-size: smaller;
+  padding-bottom: 10px;
+  font-size: 15pt;
+  line-height: 25pt;
+
+}
+
+#credits .section-title {
+  text-align: center;
+}
+
+#credits .contributor {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#credits ul {
+  width: 50%;
+  margin: auto;
+  list-style: none;
+}
+
+#partners {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* SVG Menu */
+/* padding hack for IE */
+.menu-wrapper {
+    position: relative;
+    height: 0;
+    width: 100%; /* any width you want */
+    padding-top: 100%; /* if the menu is in full circle mode. 50% if it is in semi-circle mode. */
+}
+/*#menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+}*/
+
+#menu {
+  visibility: hidden;
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  transform-origin: 50% 50% 0px;
+  transform: translate3d(0px, 0px, 0px);
+  touch-action: none;
+  -webkit-user-select: none;
+  padding-top: 100px;
+}
+a {
+  cursor: pointer;
+  outline: none;
+}
+
+.item .sector {
+  transition: all .1s linear;
+  stroke: white;
+  stroke-width: 1;
+}
+
+.item:hover .sector {
+  /*stroke-width: 12;*/
+  fill: #eee;
+}
+.item:focus .sector {
+}
+.menu-trigger {
+  /*can't override in JS if set ?*/
+  /*fill: #fff;*/
+  pointer-events: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+.menu-trigger:hover {
+  /*fill: green;*/
+}
+
+.menu-trigger text {
+  font-size: 100px;
+}
+.menu-trigger text#blueness-label {
+  font-size: 85px;
+}
+
+.menu-trigger text#blueness-label-suffix {
+  font-size: 22px;
+}
+
+.menu-trigger:hover, .menu-trigger:focus {
+  cursor:pointer;
+}
+
+.menu-trigger #label {
+  font-size: 60px;
+}
+
+.blueness-swatch .border {
+  border: 2px solid red;
+}
+
+.border {
+  border: 2px solid #102339;
+}
+symbol {
+  overflow:visible;
+}
+/* end SVG Menu */
+
+/* date picker overrides */
+.calendar .react-date-field--theme-default{
+  font-size: smaller;
+}
+
+.calendar .react-date-field--theme-default.react-date-field{
+  /*color: red;*/
+  background-color: white;
+}
+
+.calendar .react-date-field--theme-default .react-date-field__input{
+  padding-left: 30px;
+  width: 150px;
+  /*border: 1px solid red;*/
+  margin-right: 5px;
+  border-right: 1px solid #ccc;
+}
+
+.calendar .react-date-field--theme-default .react-date-field__clear-icon {
+  margin: 0px;
+}
+
+.calendar .react-date-field--theme-default .react-date-picker__footer-button {
+  /*background-color: #349aef;*/
+}
+/* END date picker overrides */
+
+/* Ripple Out */
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  border: #ccc solid 6px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}

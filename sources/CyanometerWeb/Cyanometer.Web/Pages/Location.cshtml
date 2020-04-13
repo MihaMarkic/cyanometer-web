@@ -1,0 +1,227 @@
+﻿@page "{country}/{city}"
+@model Cyanometer.Web.Pages.LocationModel
+@{
+    ViewData["Title"] = "Location";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<section id="cyan-display" class="ta-center">
+    <div data-reactroot="">
+        <div class="cyan-display-main">
+            <div class="time">
+                <span id="mainLocation"></span>
+                <br />
+                <span id="mainTakenAt"></span>
+            </div>
+            <div class="archive">
+                <a href={this.props.archive}>BROWSE ARCHIVE</a>
+            </div>
+            <div class="blueness">
+                <span>BLUENESS INDEX</span>
+                <br />
+                <span>LAST 3 HOURS</span>
+            </div>
+        </div>
+        <section class="wrapper-large" id="thumbnails-wrapper">
+            <div id="thumbnails1" class='grid grid--medium thumbnails'>
+            </div>
+            <div id="thumbnails2" class='grid grid--medium margin-top thumbnails'>
+            </div>
+        </section>
+    </div>
+</section>
+
+<hr />
+<section class="wrapper-large about ta-center">
+    <p>
+        The cyanometer was invented by Geneva-based scientist Horace Benedict de Saussure in 1789. He systematically documented the blueness of the sky with his cyanometer, a simple circular tool with 53 shades of blue. He concluded that blueness is influenced by both moisture and the amount of suspended particles in the air.
+        <br />
+        <br />
+        The Cyanometer by Martin Bricelj Baraga is inspired by the original cyanometer. De Saussure’s blue color wheel forms the core of the monument, gently directing our gaze back to the sky. The monolith gathers data of the blueness of the sky and the quality of air and visualises them, thus becoming an instrument which raises awareness on the quality of one of the crucial elements of life. In a cloud based world, the only clouds that really matter are the ones we see in the sky
+    </p>
+
+    <p class="fw-bold more"><a href="/about">VIEW PROJECT INFORMATION</a></p>
+</section>
+
+<section class="about-image ta-center">
+
+    <img src="/images/cyanometer-1200.jpg" />
+    <p>
+        In @Model.Country, the Cyanometer gathers air quality measurement data from the @Model.AirQualitySource measuring station. The Cyanometer displays the air pollution level on a color scale from red to green and points out the main pollutant in case of pollution in real time. A color scale from green to red visualises the air quality level.
+        In the case of increased levels of concentrations, three different icons indicate the main pollutant source, while the fourth one indicates the essential condition connected to elevated ozone concentrations.
+    </p>
+
+</section>
+
+<section class="wrapper-large hr">
+    <hr class="grey-hr" />
+</section>
+
+<section id="cyan-environmental-data" class="wrapper-large ta-center">
+</section>
+
+<section id="air-pollution-index" class="wrapper-large ta-center">
+    <h4 class="section-title">Pollution Index</h4>
+    <div id="ap-index-wrapper" class="grid grid--medium">
+        <div class="ap-index-colour green"></div>
+        <div class="ap-index-colour yellow"></div>
+        <div class="ap-index-colour orange"></div>
+        <div class="ap-index-colour red"></div>
+    </div>
+    <div id="ap-index-wrapper" class="grid grid--medium">
+        <div class="ap-index-colour">LOW</div>
+        <div class="ap-index-colour">MODERATE</div>
+        <div class="ap-index-colour">HIGH</div>
+        <div class="ap-index-colour">VERY HIGH</div>
+    </div>
+
+    <p class="ap-caveat"></p>
+</section>
+
+<section class="wrapper-large hr">
+    <hr class="grey-hr" />
+</section>
+
+<section id="cyan-measurements-wrapper" class="wrapper-large ta-center">
+    <div id="cyan-measurements"></div>
+    <p class="measurements-caveat">Cyanometer collects data from the @Model.AirQualitySource measuring site. If the diagram is off, data is not available. In case of cloudy weather the level of blueness may deviate.</p>
+    <hr class="grey-hr" />
+    <p>MORE: <a class="measurements-link" href="@Model.AirQualityLink">@Model.AirQualityHost</a></p>
+</section>
+
+
+<section id="credits" class="wrapper-large ta-center fs-small">
+    <h4 class="section-title">Credits</h4>
+    <p>
+        <span class="contributor">Martin Bricelj Baraga</span> concept & artistic direction • <span class="contributor">Igor Vuk</span> technical design & production • <span class="contributor">Neja Tomšič</span> production & texts •
+        <span class="contributor">Marjan Omanovič</span> installation build up • <span class="contributor">Miha Markič</span> programming •
+        <span class="contributor"><a href="https://cenatus.org">Matt Spendlove</a></span> web programming • <span class="contributor">Vishal Kassie</span> website design •
+        <span class="contributor">Domen Dimovski 3D design</span> • <span class="contributor">Katja Pahor</span> design •
+        <span class="contributor">Gašper Torkar</span> sound design
+    </p>
+    <ul>
+        <li>Production: <span class="fw-bold">MoTA – Museum of Transitory Art</span></li>
+        <li>Supported by:</li>
+        <li>Partner: <span class="fw-bold">Mestna občina Ljubljana – Zelena prestolnica Evrope 2016, ARSO – Agencija Republike Slovenije za okolje</span></li>
+        <li>Co-financed by: <span class="fw-bold">Ministrstvo za kulturo, Turizem Ljubljana</span></li>
+        <li>Sponsor: <span class="fw-bold">Energetika Ljubljana</span></li>
+    </ul>
+    <p>The Cyanometer project was developed within the <span class="fw-bold">ARTECITYA</span> network, devoted to artistic and technological innovations with the aim of improving the quality of life in cities and is co-financed by the <span class="fw-bold">Creative Europe</span>.</p>
+</section>
+
+<section id="partners" class="wrapper-large">
+    <img src="/images/partner_logos.svg" />
+</section>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        var loadedImages = 0;
+        const dateMask = "DD/MM/YYYY HH:mm";
+        var images;
+        var mainImage;
+        var tlm = new TimelineMax({ repeat: -1, repeatDelay: 0.2, yoyo: true });
+
+        $(function () {
+            $('.cyan-display-main').css("visibility", "hidden");
+            $('.debug.meta li').css("visibility", "hidden");
+            $('#thumbnails-wrapper').css("visibility", "hidden");
+            $('#menu').css("visibility", "hidden");
+            showLoadingGif();
+            var url = '/api/images/@Model.Country.ToLower()/@Model.City.ToLower()';
+            $.ajax({
+                url: url,
+                dataType: 'json',
+                success: (data) => {
+                    mainImage = data[0];
+                    $("#mainLocation").text(`${mainImage.city}, ${mainImage.country} SKY`);
+                    $("#mainTakenAt").text(moment(mainImage.takenAt).format(dateMask));
+                    preloadAllImages(data);
+                },
+                error: (xhr, status, err) => {
+                    console.error(url, status, err.toString());
+                }
+            });
+        });
+
+        function showLoadingGif() {
+            $('#cyan-display').css("background", "url(/images/loading.svg) no-repeat center");
+            $('#cyan-display').css("height", "300px");
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        }
+
+        function preloadAllImages(images) {
+            images.forEach(function (image) {
+                console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! preloading: " + image.url);
+                var row1 = $("#thumbnails1");
+                var row2 = $("#thumbnails2");
+                loadImage(image, row1, row2, images.length);
+            });
+        }
+
+        const MaxImagesPerRow = 6;
+        function loadImage(image, row1, row2, count) {
+            var path = image.thumbnailUrl;
+            var takenAt = moment(image.takenAt).format("HH:mm");
+            var imageId = `image${image.id}`;
+            $(`<img src="${path}"></img>`).load(function () {
+                var div = $(`
+<div id='${imageId}' class='thumbnail' style="color:white;background-image:url('${path}')" onclick="handleLocationClick('${image.city}','${image.country}')">
+            <p class="time">
+                ${takenAt}
+            </div>
+</div>`);
+                var target;
+                if (loadedImages < MaxImagesPerRow) {
+                    target = row1;
+                } else {
+                    target = row2;
+                }
+                div.appendTo(target);
+                loadedImages++;
+                if (loadedImages === count) {
+                    imagesLoaded();
+                }
+            });
+        }
+
+        function imagesLoaded() {
+            var tl = new TimelineLite();
+            $('.cyan-display-main').css("opacity", "0");
+            $('.selected-slice').css("opacity", "0.5");
+            $('.cyan-display-main').css("visibility", "visible");
+            $('#thumbnails-wrapper').css("visibility", "visible");
+            $('.debug.meta li').css("visibility", "visible");
+            $('#menu').css("visibility", "visible");
+            $('#cyan-display').css("background", "white");
+            $('#cyan-display').css("height", "auto");
+
+            // $('.cyan-display-main').css("opacity", 1);
+            $('.cyan-display-main').css("background", `url(${mainImage.url}) no-repeat`);
+
+            // if (window.mobilecheck()) {
+            //   $('.cyan-display-main').css("background-size", "100% 201px");
+            // }
+
+            tl.to('.cyan-display-main', 1, { opacity: 1 });
+            // tl.from('.cyan-display-main', 0.3, { x: -1200 });
+
+            tl.staggerFrom(".debug.meta li", 0.3, { scale: 0.5, opacity: 0, delay: 0.1, ease: Elastic.easeOut, force3D: true }, 0.1);
+
+
+            //if (self.state.shouldOpenMenu) {
+            //    // console.log("********** RUNNING shouldOpenMenu ");
+            //    tl.from('#trigger', 0.3, { scale: 0.5, autoAlpha: 0, transformOrigin: "50% 50%", ease: Expo.easeInOut })
+            //    tl.staggerFrom('.item', 0.2, { scale: 0.5, autoAlpha: 0, delay: 0.1 }, 0.05);
+            //}
+
+            tlm.to(".selected-slice", 0.5, { opacity: 1 });
+
+            tl.staggerFrom(".cyan-display-main .time span", 0.3, { scale: 0.5, opacity: 0, delay: 0.1, ease: Elastic.easeOut, force3D: true }, 0.1)
+                .staggerFrom(".cyan-display-main .blueness span", 0.3, { scale: 0.5, opacity: 0, delay: 0.1, ease: Elastic.easeOut, force3D: true }, 0.1)
+                .to('.menu-trigger #blueness-label', 0.5, { autoAlpha: 1 })
+                .to('.menu-trigger #blueness-label-suffix', 0.5, { autoAlpha: 1 })
+                .add(tlm); //nested, looping TLM
+        }
+    </script>
+}
