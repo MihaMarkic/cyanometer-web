@@ -58,6 +58,9 @@
 </section>
 
 <section id="cyan-environmental-data" class="wrapper-large ta-center">
+    <div id="environmental-data" class="environmental-data" style={divStyle}>
+        <h4 class="section-title">Current Data</h4>
+    </div>
 </section>
 
 <section id="air-pollution-index" class="wrapper-large ta-center">
@@ -83,7 +86,56 @@
 </section>
 
 <section id="cyan-measurements-wrapper" class="wrapper-large ta-center">
-    <div id="cyan-measurements"></div>
+    <div id="cyan-measurements">
+        <div class="cyan-measurements">
+            <h4 class="section-title">Measurements</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="right-border">Pollutant</td>
+                        <td>Ozone (O<sub>3</sub>)</td>
+                        <td>Particles (PM<sub>10</sub>)</td>
+                        <td>Sulfur Dioxide (SO<sub>2</sub>) </td>
+                        <td>Nitrogen Dioxide (NO<sub>2</sub>) </td>
+                    </tr>
+                    <tr class="spacer">
+                        <td class="right-border"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="right-border">Concentration</td>
+                        <td class="concentration">@Model.Pollution.Ozone &micro;g/m³</td>
+                        <td class="concentration">@Model.Pollution.PM10 &micro;g/m³</td>
+                        <td class="concentration">@Model.Pollution.SO2 &micro;g/m³</td>
+                        <td class="concentration">@Model.Pollution.NO2 &micro;g/m³</td>
+                    </tr>
+                    <tr class="spacer">
+                        <td class="right-border"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="right-border">Main Source</td>
+                        <td>/</td>
+                        <td>Residential Wood Burning</td>
+                        <td>Industry</td>
+                        <td>Traffic</td>
+                    </tr>
+                    <tr>
+                        <td class="right-border"></td>
+                        <td class="table-icon"><img src="/images/cyano_icons_web_sun.svg" /></td>
+                        <td class="table-icon"><img src="/images/cyano_icons_web_house.svg" /></td>
+                        <td class="table-icon"><img src="/images/cyano_icons_web_factory.svg" /></td>
+                        <td class="table-icon"><img src="/images/cyano_icons_web_car.svg" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p className="measurements-caveat">*Particles with aerodynamic diameter less than 10 µm.</p>
+        </div>
+    </div>
     <p class="measurements-caveat">Cyanometer collects data from the @Model.AirQualitySource measuring site. If the diagram is off, data is not available. In case of cloudy weather the level of blueness may deviate.</p>
     <hr class="grey-hr" />
     <p>MORE: <a class="measurements-link" href="@Model.AirQualityLink">@Model.AirQualityHost</a></p>
@@ -128,6 +180,7 @@
         var label;
 
         $(function () {
+            insertPolutionData('@Model.PollutionIcon', '@Model.PollutionColor', '@Model.PollutionText', '@Model.LevelsText');
             $('.cyan-display-main').css("visibility", "hidden");
             $('.debug.meta li').css("visibility", "hidden");
             $('#thumbnails-wrapper').css("visibility", "hidden");
@@ -380,6 +433,43 @@
             } else {
                 openMenu();
             }
+        }
+
+        function insertPolutionData(icon, color, pollutionText, levelsText) {
+            var info = "";
+            if (pollutionText && levelsText) {
+                info = `
+<p>
+    The current level of air pollution is ${pollutionText}
+    <br />
+    There are increased levels of ${levelsText}
+</p>;`;
+            }
+            var icon;
+            switch (icon) {
+                case "car":
+                    icon = createIconCar(color);
+                    break;
+                case "factory":
+                    icon = createIconFactory(color);
+                    break;
+                case "house":
+                    icon = createIconHouse(color);
+                    break;
+                case "sun":
+                    icon = createIconSun(color);
+                    break;
+                case "circle":
+                    icon = createIconCircle(color);
+                    break;
+                default:
+                    icon = `<p>UNKNOWN AT THIS TIME</p>`;
+                    break;
+            }
+             var html = `
+${icon}
+${info}`;
+            $(html).appendTo("#environmental-data");
         }
     </script>
 }
