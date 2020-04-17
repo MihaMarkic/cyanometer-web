@@ -28,7 +28,7 @@ namespace Cyanometer.Web.Api
                     city: "Wroclaw",
                     country: "Poland",
                     id: 146649,
-                    bluenessIndex: "19"
+                    bluenessIndex: 19
                 ),
                 new LandingItem(
                     takenAt: DateTimeOffset.Now,
@@ -36,7 +36,7 @@ namespace Cyanometer.Web.Api
                     city: "Ljubljana",
                     country: "Slovenija",
                     id: 146648,
-                    bluenessIndex: "19"
+                    bluenessIndex: 19
                 )
            };
         }
@@ -50,8 +50,8 @@ namespace Cyanometer.Web.Api
         public string City { get; }
         public string Country { get; }
         public int Id { get; }
-        public string BluenessIndex { get; }
-        public LandingItem(DateTimeOffset takenAt, string url, string city, string country, int id, string bluenessIndex)
+        public int BluenessIndex { get; }
+        public LandingItem(DateTimeOffset takenAt, string url, string city, string country, int id, int bluenessIndex)
         {
             TakenAt = takenAt;
             Url = ImageLocator.GetFullUrl(url); ;

@@ -5,7 +5,15 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cyanometer.Web", "Cyanometer.Web\Cyanometer.Web.csproj", "{5059DC2D-36F2-4AC7-9EAD-E8C596D78B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyanometer.Core", "Cyanometer.Core\Cyanometer.Core.csproj", "{2CAB83B9-EE60-4A76-9468-8F3679ACB20A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cyanometer.Core", "Cyanometer.Core\Cyanometer.Core.csproj", "{2CAB83B9-EE60-4A76-9468-8F3679ACB20A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B66A4D5D-330E-4B89-996F-E4CDEEFD1A6C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\.gitignore = ..\..\.gitignore
+		..\..\appbuild.cake = ..\..\appbuild.cake
+		..\..\build.ps1 = ..\..\build.ps1
+		..\..\version.xml = ..\..\version.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

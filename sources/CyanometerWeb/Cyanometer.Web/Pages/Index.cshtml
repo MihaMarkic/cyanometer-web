@@ -23,7 +23,7 @@
 {
     <script type="text/javascript">
         var loadedImages = 0;
-        const dateMask = "DD/MM/YYYY HH:mm";
+        const dateMask = "DD.MM.YYYY HH:mm";
 
         $(function () {
             $('.cyan-display-main').css("visibility", "hidden");
@@ -51,9 +51,9 @@
         }
 
         function preloadAllImages(images) {
+            var grid = $("#images");
             images.forEach(function (image) {
                 console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! preloading: " + image.url);
-                var grid = $("#images");
                 loadImage(image, grid, images.length);
             });
         }
