@@ -34,7 +34,7 @@ namespace Cyanometer.Web.Api
                     takenAt: DateTimeOffset.Now,
                     url: "https://s3.eu-central-1.amazonaws.com/cyanometer-v2/prod/Slovenia/Ljubljana/Central-Square/2020/04/10/sky-10.04.2020-12_19_53-large.jpg",
                     city: "Ljubljana",
-                    country: "Slovenija",
+                    country: "Slovenia",
                     id: 146648,
                     bluenessIndex: 19
                 )

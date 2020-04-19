@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using System.IO;
+using Cyanometer.Core.Extensions;
+using Cyanometer.AirQuality.Extensions;
 
 namespace Cyanometer.Web
 {
@@ -22,6 +24,8 @@ namespace Cyanometer.Web
         {
             var physicalProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
             services.AddSingleton(physicalProvider);
+            services.AddCyanoCore();
+            services.AddAirQuality();
 
             services.AddRazorPages();
             services.AddControllers();
@@ -39,6 +43,7 @@ namespace Cyanometer.Web
                 app.UseExceptionHandler("/Error");
             }
 
+            app.UseStatusCodePages();
             app.UseStaticFiles();
 
             app.UseRouting();

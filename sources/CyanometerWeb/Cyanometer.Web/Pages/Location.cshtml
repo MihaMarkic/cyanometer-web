@@ -180,7 +180,7 @@
         var label;
 
         $(function () {
-            insertPolutionData('@Model.PollutionIcon', '@Model.PollutionColor', '@Model.PollutionText', '@Model.LevelsText');
+            insertPolutionData('@Model.PollutionMeasurement', '#@Model.PollutionColor', '@Model.PollutionText', '@Model.LevelsText');
             $('.cyan-display-main').css("visibility", "hidden");
             $('.debug.meta li').css("visibility", "hidden");
             $('#thumbnails-wrapper').css("visibility", "hidden");
@@ -447,19 +447,19 @@
             }
             var icon;
             switch (icon) {
-                case "car":
+                case "NO2":
                     icon = createIconCar(color);
                     break;
-                case "factory":
+                case "SO2":
                     icon = createIconFactory(color);
                     break;
-                case "house":
+                case "PM10":
                     icon = createIconHouse(color);
                     break;
-                case "sun":
+                case "O3":
                     icon = createIconSun(color);
                     break;
-                case "circle":
+                case "LOW":
                     icon = createIconCircle(color);
                     break;
                 default:

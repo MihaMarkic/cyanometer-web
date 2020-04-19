@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Cyanometer.AirQuality\Cyanometer.AirQuality.csproj" />
     <ProjectReference Include="..\Cyanometer.Core\Cyanometer.Core.csproj" />
   </ItemGroup>
 
