@@ -3,6 +3,7 @@ using Cyanometer.Web.Models;
 using Cyanometer.Web.Services.Abstract;
 using Flurl;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,14 @@ namespace Cyanometer.Web.Services.Implementation
         readonly ILogger<ImagesManager> logger;
         readonly IWebHostEnvironment webHostEnvironment;
         readonly IImagesFileManager imagesFileManager;
-        public ImagesManager(ILogger<ImagesManager> logger, IWebHostEnvironment webHostEnvironment, IImagesFileManager imagesFileManager)
+        readonly IMemoryCache cache;
+        public ImagesManager(ILogger<ImagesManager> logger, IWebHostEnvironment webHostEnvironment, IImagesFileManager imagesFileManager,
+            IMemoryCache cache)
         {
             this.logger = logger;
             this.webHostEnvironment = webHostEnvironment;
             this.imagesFileManager = imagesFileManager;
+            this.cache = cache;
         }
 
         public IEnumerable<ImageMeta> GetOlderImagesThan(CyanometerDataSource source, DateTimeOffset now)
@@ -31,15 +35,18 @@ namespace Cyanometer.Web.Services.Implementation
 
             var fileProvider = webHostEnvironment.WebRootFileProvider;
 
+            bool isToday = true;
             while (path != null)
             {
                 string uriPath = GetRelativeUriPathForDate(source, now);
                 var content = fileProvider.GetDirectoryContents(Path.Combine("cyano", path));
-                var images = imagesFileManager.ReadMetaForDate(source, content, uriPath);
+                var images = imagesFileManager.ReadMetaForDate(source, content, uriPath, isToday);
                 foreach (var image in images.OrderByDescending(i => i.Date))
                 {
                     yield return image;
                 }
+                now = now.AddDays(-1);
+                isToday = false;
                 path = GetRelativePhysicalPathForDate(source, now);
             }
         }

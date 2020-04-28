@@ -1,6 +1,8 @@
 ﻿using Cyanometer.AirQuality.Services.Abstract;
+using Cyanometer.Core;
 using Cyanometer.Core.Services.Abstract;
 using Flurl;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Globalization;
@@ -14,26 +16,31 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
     public class ArsoService : AirQualityService, IAirQualityService
     {
         private const string url = "ones_zrak_urni_podatki_zadnji.xml";
-        
-        public ArsoService(ILogger<ArsoService> logger, ICyanoHttpClient client)
+        readonly IMemoryCache cache;
+        public ArsoService(ILogger<ArsoService> logger, ICyanoHttpClient client, IMemoryCache cache)
             : base(logger, client, "http://www.arso.gov.si/xml/zrak/")
         {
+            this.cache = cache;
         }
         public string DataSourceInfo => "ARSO Ljubljana Bežigrad";
         public string DataSourceUri => "https://www.arso.gov.si/";
         public async Task<AirQualityData> GetIndexAsync(CancellationToken ct)
         {
-            logger.LogInformation("Starting retrieving arso data");
-            try
+            var result = await cache.GetOrCreateAsync(CacheKeys.ArsoData, async ce =>
             {
-                XDocument doc = await GetDataAsync(ct);
-                return ParseData(doc, "E21");
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Failed retrieving arso data for some reason");
-                throw;
-            }
+                logger.LogInformation("Starting retrieving arso data");
+                try
+                {
+                    XDocument doc = await GetDataAsync(ct);
+                    return ParseData(doc, "E21");
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex, "Failed retrieving arso data for some reason");
+                    throw;
+                }
+            });
+            return result;
         }
 
         public AirQualityData ParseData(XDocument doc, string stationCode)

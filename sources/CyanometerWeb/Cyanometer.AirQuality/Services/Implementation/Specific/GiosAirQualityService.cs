@@ -1,6 +1,8 @@
 ﻿using Cyanometer.AirQuality.Services.Abstract;
+using Cyanometer.Core;
 using Cyanometer.Core.Services.Abstract;
 using Flurl;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
@@ -14,45 +16,52 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
 {
     public class GiosAirQualityService : AirQualityService, IAirQualityService
     {
+        readonly IMemoryCache cache;
         /// <summary>
         /// 
         /// </summary>
         /// <remarks>Got from https://api.gios.gov.pl/pjp-api/rest/station/findAll - Wrocław - Korzeniowskiego</remarks>
         public const int WroclawStationId = 117;
-        public GiosAirQualityService(ILogger<GiosAirQualityService> logger, ICyanoHttpClient client) :
+        public GiosAirQualityService(ILogger<GiosAirQualityService> logger, ICyanoHttpClient client, IMemoryCache cache) :
             base(logger, client, "https://api.gios.gov.pl/pjp-api/rest/")
         {
+            this.cache = cache;
         }
         public string DataSourceInfo => "Voivodship Inspectorates for Environmental Protection";
         public string DataSourceUri => "http://www.gios.gov.pl/en/";
         public async Task<AirQualityData> GetIndexAsync(CancellationToken ct)
         {
-            logger.LogInformation("Starting retrieving Wroclaw GIOS data");
-            try
+            var result = await cache.GetOrCreateAsync(CacheKeys.GiosData, async ce =>
             {
-                var sensors = await GetSensorIdsAsync(ct);
-                AirQualityData data = new AirQualityData();
-                var tasks = ImmutableDictionary<ParamId, Task<Measurements>>.Empty;
-                foreach (var pair in sensors)
+                logger.LogInformation("Starting retrieving Wroclaw GIOS data");
+                try
                 {
-                    Task<Measurements> dataTask = pair.Value.HasValue ? GetDataAsync(pair.Value.Value, ct) : Task.FromResult<Measurements>(null);
-                    tasks = tasks.Add(pair.Key, dataTask);
+                    var sensors = await GetSensorIdsAsync(ct);
+                    AirQualityData data = new AirQualityData();
+                    var tasks = ImmutableDictionary<ParamId, Task<Measurements>>.Empty;
+                    foreach (var pair in sensors)
+                    {
+                        Task<Measurements> dataTask = pair.Value.HasValue ? GetDataAsync(pair.Value.Value, ct) : Task.FromResult<Measurements>(null);
+                        tasks = tasks.Add(pair.Key, dataTask);
+                    }
+                    await Task.WhenAll(tasks.Values);
+                    data.SO2 = tasks[ParamId.SO2].Result?.Values?.FirstOrDefault()?.Value;
+                    data.PM10 = tasks[ParamId.PM10].Result?.Values?.FirstOrDefault()?.Value;
+                    data.O3 = tasks[ParamId.O3].Result?.Values?.FirstOrDefault()?.Value;
+                    data.NO2 = tasks[ParamId.NO2].Result?.Values?.FirstOrDefault()?.Value;
+                    data.CO = tasks[ParamId.CO].Result?.Values?.FirstOrDefault()?.Value;
+                    // for date reference take the one from PM10 sensor reading
+                    data.Date = tasks[ParamId.PM10].Result.Values.First().Date;
+                    ce.SetAbsoluteExpiration(TimeSpan.FromMinutes(5));
+                    return data;
                 }
-                await Task.WhenAll(tasks.Values);
-                data.SO2 = tasks[ParamId.SO2].Result?.Values?.FirstOrDefault()?.Value;
-                data.PM10 = tasks[ParamId.PM10].Result?.Values?.FirstOrDefault()?.Value;
-                data.O3 = tasks[ParamId.O3].Result?.Values?.FirstOrDefault()?.Value;
-                data.NO2 = tasks[ParamId.NO2].Result?.Values?.FirstOrDefault()?.Value;
-                data.CO = tasks[ParamId.CO].Result?.Values?.FirstOrDefault()?.Value;
-                // for date reference take the one from PM10 sensor reading
-                data.Date = tasks[ParamId.PM10].Result.Values.First().Date;
-                return data;
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Failed retrieving Wroclaw GIOS data for some reason");
-                throw;
-            }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex, "Failed retrieving Wroclaw GIOS data for some reason");
+                    throw;
+                }
+            });
+            return result;
         }
 
         internal async Task<ImmutableDictionary<ParamId, int?>> GetSensorIdsAsync(CancellationToken ct)

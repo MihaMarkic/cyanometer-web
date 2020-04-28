@@ -7,6 +7,6 @@ namespace Cyanometer.Web.Services.Abstract
 {
     public interface IImagesFileManager
     {
-        ImmutableArray<ImageMeta> ReadMetaForDate(CyanometerDataSource source, IDirectoryContents content, string uriPath);
+        ImmutableArray<ImageMeta> ReadMetaForDate(CyanometerDataSource source, IDirectoryContents content, string uriPath, bool current);
     }
 }
