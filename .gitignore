@@ -129,3 +129,6 @@ Artwork
 /tools/**
 !/tools/packages.config
 node_modules
+# exclude test files
+/sources/CyanometerWeb/Cyanometer.Web/wwwroot/cyano
+/scripts

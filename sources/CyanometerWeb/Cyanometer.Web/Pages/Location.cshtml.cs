@@ -48,7 +48,7 @@ namespace Cyanometer.Web.Pages
                 return NotFound();
             }
             string key = $"air_pollution_for_{country}/{city}";
-            var service = airQualityServiceFactory.GetService(cyanometerDataSource.Source);
+            var service = airQualityServiceFactory.GetService(cyanometerDataSource.AirQualitySource);
             AirQualitySource = service.DataSourceInfo;
             AirQualityLink = service.DataSourceUri;
             AirQualityPollutionCalculated calculated = await memoryCache.GetOrCreateAsync(key, async entry =>
@@ -83,18 +83,25 @@ namespace Cyanometer.Web.Pages
                 Measurement.PM10 => "PARTICLES",
                 _ => ""
             };
-            Pollution = new Pollution(92, 13, 4, 6);
+            Pollution = new Pollution(
+                FromDouble(calculated.Data.O3), 
+                FromDouble(calculated.Data.PM10), 
+                FromDouble(calculated.Data.SO2),
+                FromDouble(calculated.Data.NO2)
+            );
             return Page();
         }
+
+        int? FromDouble(double? value) => value.HasValue ? (int?)Convert.ToInt32(value.Value): null;
     }
 
     public class Pollution
     {
-        public int Ozone { get; }
-        public int PM10 { get; }
-        public int SO2 { get; }
-        public int NO2 { get; }
-        public Pollution(int ozone, int pM10, int sO2, int nO2)
+        public int? Ozone { get; }
+        public int? PM10 { get; }
+        public int? SO2 { get; }
+        public int? NO2 { get; }
+        public Pollution(int? ozone, int? pM10, int? sO2, int? nO2)
         {
             Ozone = ozone;
             PM10 = pM10;

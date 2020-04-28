@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Immutable;
+using System.IO;
 
 namespace Cyanometer.Core
 {
@@ -12,8 +13,8 @@ namespace Cyanometer.Core
         CyanometerDataSources()
         {
             Data = ImmutableDictionary.Create<string, CyanometerDataSource>(StringComparer.OrdinalIgnoreCase)
-                .Add(Ljubljana, new CyanometerDataSource(AirQualitySource.Arso, airQualityLocation: "E21"))
-                .Add(Wroclaw, new CyanometerDataSource(AirQualitySource.Gios, airQualityLocation: null));
+                .Add(Ljubljana, new CyanometerDataSource("Slovenia", "Ljubljana", AirQualitySource.Arso, Ljubljana, "Central-Square", airQualityLocation: "E21"))
+                .Add(Wroclaw, new CyanometerDataSource("Poland", "Wroclaw", AirQualitySource.Gios, Wroclaw, "University-Library", airQualityLocation: null));
         }
         public CyanometerDataSource GetData(string city, string country)
         {
@@ -27,11 +28,22 @@ namespace Cyanometer.Core
 
     public class CyanometerDataSource
     {
-        public AirQualitySource Source { get; }
+        public string Country { get; }
+        public string City { get; }
+        public AirQualitySource AirQualitySource { get; }
+        public string RootUriPath { get; }
+        public string RootDiskPath { get; }
+        public string CameraLocationPath { get; }
         public string AirQualityLocation { get; }
-        public CyanometerDataSource(AirQualitySource source, string airQualityLocation)
+        public CyanometerDataSource(string country, string city, 
+            AirQualitySource source, string rootUriPath, string cameraLocationPath, string airQualityLocation)
         {
-            Source = source;
+            Country = country;
+            City = city;
+            AirQualitySource = source;
+            RootUriPath = rootUriPath;
+            RootDiskPath = Path.Combine(rootUriPath.Split('/'));
+            CameraLocationPath = cameraLocationPath;
             AirQualityLocation = airQualityLocation;
         }
     }

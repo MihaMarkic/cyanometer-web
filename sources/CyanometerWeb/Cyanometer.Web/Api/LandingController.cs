@@ -1,74 +1,48 @@
-﻿using Flurl;
+﻿using Cyanometer.Core;
+using Cyanometer.Web.Models;
+using Cyanometer.Web.Services.Abstract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Text.Json.Serialization;
+using System.Linq;
 
 namespace Cyanometer.Web.Api
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class LandingController : ControllerBase
+    public class LandingController : CyanometerController<LandingController>
     {
-        readonly ILogger<LandingController> logger;
+        readonly IImagesManager imagesManager;
 
-        public LandingController(ILogger<LandingController> logger)
+        public LandingController(ILogger<LandingController> logger, IImagesManager imagesManager): base(logger)
         {
-            this.logger = logger;
+            this.imagesManager = imagesManager;
         }
 
         [HttpGet]
-        public ActionResult<LandingItem[]> Get()
+        public ActionResult<ImageItem[]> Get()
         {
-            return new[]
-            {
-                new LandingItem(
-                    takenAt: DateTimeOffset.Now,
-                    url: "https://s3.eu-central-1.amazonaws.com/cyanometer-v2/prod/Poland/Wroclaw/University Library/2020/04/10/sky-10.04.2020-10_21_49-large.jpg",
-                    city: "Wroclaw",
-                    country: "Poland",
-                    id: 146649,
-                    bluenessIndex: 19
-                ),
-                new LandingItem(
-                    takenAt: DateTimeOffset.Now,
-                    url: "https://s3.eu-central-1.amazonaws.com/cyanometer-v2/prod/Slovenia/Ljubljana/Central-Square/2020/04/10/sky-10.04.2020-12_19_53-large.jpg",
-                    city: "Ljubljana",
-                    country: "Slovenia",
-                    id: 146648,
-                    bluenessIndex: 19
-                )
-           };
-        }
-    }
+            DateTimeOffset now;
+#if DEBUG
+            now = new DateTimeOffset(2017, 08, 03, 12, 12, 12, TimeSpan.Zero);
+#else
+            now = DateTimeOffset.Now;
+#endif
+            var query = from s in CyanometerDataSources.Default.Data.Values
+                        let m = imagesManager.GetOlderImagesThan(s, now).Cast<ImageMeta?>().FirstOrDefault()
+                        where m.HasValue
+                        select new ImageItem(
+                                 takenAt: m.Value.Date,
+                                 url: m.Value.ImageUriPath,
+                                 thumbnailUrl: m.Value.ThumbnailUriPath,
+                                 city: s.City,
+                                 country: s.Country,
+                                 id: 146649,
+                                 bluenessIndex: m.Value.BluenessIndex
+                             );
 
-    public readonly struct LandingItem
-    {
-        public DateTimeOffset TakenAt { get; }
-        public string Url { get; }
-        public string ThumbnailUrl { get; }
-        public string City { get; }
-        public string Country { get; }
-        public int Id { get; }
-        public int BluenessIndex { get; }
-        public LandingItem(DateTimeOffset takenAt, string url, string city, string country, int id, int bluenessIndex)
-        {
-            TakenAt = takenAt;
-            Url = ImageLocator.GetFullUrl(url); ;
-            City = city;
-            Country = country;
-            Id = id;
-            BluenessIndex = bluenessIndex;
-            ThumbnailUrl = ImageLocator.GetThumbnailUrl(url);
+            var result = query.ToArray();
+            return result;
         }
-    }
-
-    public static class ImageLocator
-    {
-        const string rootUrl = "https://res.cloudinary.com/mota/image/fetch/";
-        static readonly string thumbnailRootUrl = Url.Combine(rootUrl, "w_178,h_100,c_thumb");
-        static readonly string fullRootUrl = Url.Combine(rootUrl, "w_1200,h_675,ar_16:9");
-        public static string GetThumbnailUrl(string imageUrl) => Url.Combine(thumbnailRootUrl, imageUrl);
-        public static string GetFullUrl(string imageUrl) => Url.Combine(fullRootUrl, imageUrl);
     }
 }

@@ -7,6 +7,8 @@ using Microsoft.Extensions.Hosting;
 using System.IO;
 using Cyanometer.Core.Extensions;
 using Cyanometer.AirQuality.Extensions;
+using Cyanometer.Web.Services.Implementation;
+using Cyanometer.Web.Services.Abstract;
 
 namespace Cyanometer.Web
 {
@@ -26,6 +28,8 @@ namespace Cyanometer.Web
             services.AddSingleton(physicalProvider);
             services.AddCyanoCore();
             services.AddAirQuality();
+            services.AddSingleton<IImagesFileManager, ImagesFileManager>();
+            services.AddSingleton<IImagesManager, ImagesManager>();
 
             services.AddRazorPages();
             services.AddControllers();

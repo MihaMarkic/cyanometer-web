@@ -23,4 +23,9 @@
     <ProjectReference Include="..\Cyanometer.Core\Cyanometer.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\cyano\Slovenia\Ljubljana\Central-Square\2017\08\02\" />
+    <Folder Include="wwwroot\cyano\Slovenia\Ljubljana\Central-Square\2017\08\03\" />
+  </ItemGroup>
+
 </Project>
