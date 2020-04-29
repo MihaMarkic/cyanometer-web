@@ -6,9 +6,6 @@
     "moment": "2.13.0"
   },
   "devDependencies": {},
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
