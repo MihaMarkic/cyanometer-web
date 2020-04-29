@@ -6,6 +6,9 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 using System;
 using System.Collections.Immutable;
 using System.IO;
@@ -15,7 +18,7 @@ namespace Cyanometer.Web.Services.Implementation
 {
     public class ImagesFileManager : IImagesFileManager
     {
-        const string WwwRoot = "/cyano";
+        const string WwwRoot = "cyano";
         readonly IMemoryCache cache;
         readonly ILogger<ImagesFileManager> logger;
         public ImagesFileManager(ILogger<ImagesFileManager> logger, IMemoryCache cache)
@@ -44,8 +47,8 @@ namespace Cyanometer.Web.Services.Implementation
         internal ImageMeta CreateMetaFromSourceAndInfo(CyanometerDataSource source, ImageInfo info, string uriPath, string fileName)
         {
             return new ImageMeta(
-                            Url.Combine(WwwRoot, uriPath, $"{fileName}.jpg"),
-                            Url.Combine(WwwRoot, uriPath, $"thumb-{fileName}.jpg"),
+                            Url.Combine("/", WwwRoot, uriPath, $"{fileName}.jpg"),
+                            Url.Combine("/", WwwRoot, uriPath, $"thumb-{fileName}.jpg"),
                             info.Date,
                             info.BluenessIndex
                         );
@@ -61,6 +64,27 @@ namespace Cyanometer.Web.Services.Implementation
             {
                 return sr.ReadToEnd();
             }
+        }
+
+        public string GetRelativePhysicalPathForDate(CyanometerDataSource source, DateTimeOffset now)
+        {
+            return Path.Combine(source.RootDiskPath, source.CameraLocationPath,
+                now.Year.ToString("0000"), now.Month.ToString("00"), now.Day.ToString("00"));
+        }
+
+        internal static string CreateThumbnailFileName(string fileName) => $"thumb-{Path.GetFileName(fileName)}";
+        internal static string CreateInfoFileName(string fileName) => $"{Path.GetFileNameWithoutExtension(fileName)}.info";
+        public void SaveImage(CyanometerDataSource source, string wwwRootDirectory, Image<Rgba32> image, Image<Rgba32> thumb, ImageInfo info, string fullName)
+        {
+            string directory = Path.Combine(wwwRootDirectory, WwwRoot, GetRelativePhysicalPathForDate(source, info.Date));
+            Directory.CreateDirectory(directory);
+            image.Save(Path.Combine(directory, fullName));
+
+            string thumbnailName = CreateThumbnailFileName(fullName);
+            thumb.Save(Path.Combine(directory, thumbnailName));
+
+            string infoFileName = CreateInfoFileName(fullName);
+            File.WriteAllText(Path.Combine(directory, infoFileName), JsonConvert.SerializeObject(info));
         }
     }
 }
