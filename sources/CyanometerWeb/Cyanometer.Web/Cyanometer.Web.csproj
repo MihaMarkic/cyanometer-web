@@ -6,6 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="wwwroot\js\index.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\index.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="wwwroot\favicon.ico">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -13,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BundlerMinifier.Core" Version="3.2.447" />
     <PackageReference Include="Flurl" Version="2.8.2" />
     <PackageReference Include="Humanizer.Core" Version="2.7.9" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
@@ -27,6 +37,11 @@
   <ItemGroup>
     <Folder Include="wwwroot\cyano\Slovenia\Ljubljana\Central-Square\2017\08\02\" />
     <Folder Include="wwwroot\cyano\Slovenia\Ljubljana\Central-Square\2017\08\03\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="wwwroot\js\index.min.js" />
   </ItemGroup>
 
 </Project>

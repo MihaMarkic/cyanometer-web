@@ -37,7 +37,7 @@ function preloadAllImages(images) {
 function loadImage(image, target, count) {
     var path = image.thumbnailUrl;
     var takenAt = moment(image.takenAt).format(dateMask);
-    $(`<img src="${path}"></img>`).load(function () {
+    $(`<img src="${path}"></img>`).on('load', function () {
         var div = $(`
 <div class='cyan-display-main landing-image' style="background-image:url('${path}')" onclick="handleLocationClick('${image.city}','${image.country}')">
             <div class="time">
