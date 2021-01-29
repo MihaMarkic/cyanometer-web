@@ -1,0 +1,54 @@
+[
+  {
+    "outputFileName": "wwwroot/js/index.min.js",
+    "inputFiles": [
+      "wwwroot/js/index.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/location.min.js",
+    "inputFiles": [
+      "wwwroot/js/location.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/vendor/utils.min.js",
+    "inputFiles": [
+      "wwwroot/vendor/utils.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/vendor/pie_menu_utils.min.js",
+    "inputFiles": [
+      "wwwroot/vendor/pie_menu_utils.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/app.css",
+      "wwwroot/css/common.css",
+      "wwwroot/css/devices.css"
+    ]
+  }
+]
