@@ -8,6 +8,7 @@ using System.Linq;
 using Microsoft.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Text;
+using Microsoft.Extensions.Logging;
 
 namespace Cyanometer.Web.Utilities
 {
@@ -55,6 +56,7 @@ namespace Cyanometer.Web.Utilities
                 }.ToImmutableDictionary();
 
         public static async Task<Stream> ProcessStreamedFile(
+            ILogger logger,
             MultipartSection section, ContentDispositionHeaderValue contentDisposition,
             ModelStateDictionary modelState, string[] permittedExtensions, long sizeLimit)
         {
@@ -85,6 +87,7 @@ namespace Cyanometer.Web.Utilities
             }
             catch (Exception ex)
             {
+                logger.LogError(ex, "Upload failed");
                 modelState.AddModelError("File", $"The upload failed. Please contact the Help Desk for support. Error: {ex.HResult}");
             }
 

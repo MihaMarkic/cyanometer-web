@@ -79,12 +79,15 @@ namespace Cyanometer.Web.Services.Implementation
             string directory = Path.Combine(wwwRootDirectory, WwwRoot, GetRelativePhysicalPathForDate(source, info.Date));
             Directory.CreateDirectory(directory);
             image.Save(Path.Combine(directory, fullName));
+            logger.LogDebug($"Image saved to {Path.Combine(directory, fullName)}");
 
             string thumbnailName = CreateThumbnailFileName(fullName);
             thumb.Save(Path.Combine(directory, thumbnailName));
+            logger.LogDebug($"Image saved to {Path.Combine(directory, thumbnailName)}");
 
             string infoFileName = CreateInfoFileName(fullName);
             File.WriteAllText(Path.Combine(directory, infoFileName), JsonConvert.SerializeObject(info));
+            logger.LogDebug($"Info saved to {Path.Combine(directory, infoFileName)}");
         }
     }
 }

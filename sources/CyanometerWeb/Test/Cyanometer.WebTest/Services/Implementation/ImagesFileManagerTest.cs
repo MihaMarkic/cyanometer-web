@@ -87,7 +87,7 @@ namespace Cyanometer.WebTest.Services.Implementation
 
                 var actual = Target.GetRelativePhysicalPathForDate(ljubljana, new DateTimeOffset(2017, 8, 2, 5, 38, 36, TimeSpan.Zero));
 
-                Assert.That(actual, Is.EqualTo(@"slovenia\ljubljana\Central-Square\2017\08\02"));
+                Assert.That(actual, Is.EqualTo(Path.Combine("slovenia", "ljubljana", "Central-Square", "2017", "08", "02")));
             }
         }
     }

@@ -80,78 +80,104 @@ namespace Cyanometer.Web.Api
         //[DisableFormValueModelBinding]
         public async Task<IActionResult> PostFiles()
         {
-            string country = (string)Request.RouteValues["country"];
-            string city = (string)Request.RouteValues["city"];
-            var dataSource = CyanometerDataSources.Default.GetData(city, country);
-            if (dataSource != null)
+            try
             {
-                string token = Request.Headers["CyanometerToken"];
-                if (!string.Equals(dataSource.Id.ToString(), token, StringComparison.OrdinalIgnoreCase))
+                string country = (string)Request.RouteValues["country"];
+                string city = (string)Request.RouteValues["city"];
+                logger.LogDebug($"Receiving photo for {country}/{city}");
+                var dataSource = CyanometerDataSources.Default.GetData(city, country);
+                if (dataSource != null)
                 {
-                    return StatusCode(StatusCodes.Status401Unauthorized);
-                }
-                if (!MultipartRequestHelper.IsMultipartContentType(Request.ContentType))
-                {
-                    ModelState.AddModelError("File", "The request couldn't be processed (Error 1).");
-                    return BadRequest(ModelState);
-                }
-                var boundary = MultipartRequestHelper.GetBoundary(
-                    MediaTypeHeaderValue.Parse(Request.ContentType),
-                    defaultFormOptions.MultipartBoundaryLengthLimit);
-                var reader = new MultipartReader(boundary, HttpContext.Request.Body);
-                var section = await reader.ReadNextSectionAsync();
-
-                while (section != null)
-                {
-                    var hasContentDispositionHeader = ContentDispositionHeaderValue.TryParse(section.ContentDisposition, out var contentDisposition);
-
-                    if (hasContentDispositionHeader)
+                    string token = Request.Headers["CyanometerToken"];
+                    if (!string.Equals(dataSource.Id.ToString(), token, StringComparison.OrdinalIgnoreCase))
                     {
-                        // This check assumes that there's a file
-                        // present without form data. If form data
-                        // is present, this method immediately fails
-                        // and returns the model error.
-                        if (!MultipartRequestHelper.HasFileContentDisposition(contentDisposition))
+                        logger.LogWarning("Invalid token");
+                        return StatusCode(StatusCodes.Status401Unauthorized);
+                    }
+                    if (!MultipartRequestHelper.IsMultipartContentType(Request.ContentType))
+                    {
+                        ModelState.AddModelError("File", "The request couldn't be processed (Error 1).");
+                        logger.LogWarning("The request couldn't be processed (Error 1).");
+                        return BadRequest(ModelState);
+                    }
+                    var boundary = MultipartRequestHelper.GetBoundary(
+                        MediaTypeHeaderValue.Parse(Request.ContentType),
+                        defaultFormOptions.MultipartBoundaryLengthLimit);
+                    var reader = new MultipartReader(boundary, HttpContext.Request.Body);
+                    var section = await reader.ReadNextSectionAsync();
+
+                    while (section != null)
+                    {
+                        logger.LogDebug("Reading section");
+                        var hasContentDispositionHeader = ContentDispositionHeaderValue.TryParse(section.ContentDisposition, out var contentDisposition);
+
+                        if (hasContentDispositionHeader)
                         {
-                            ModelState.AddModelError("File", "The request couldn't be processed (Error 2)");
-                            return BadRequest(ModelState);
-                        }
-                        else
-                        {
-                            // Don't trust the file name sent by the client. To display
-                            // the file name, HTML-encode the value.
-                            using (var streamedFileContent = await FileHelpers.ProcessStreamedFile(
-                                section, contentDisposition, ModelState,
-                                new[] { ".jpg", ".jpeg" }, 1024 * 1024 * 6)) // max 4MB file
+                            // This check assumes that there's a file
+                            // present without form data. If form data
+                            // is present, this method immediately fails
+                            // and returns the model error.
+                            if (!MultipartRequestHelper.HasFileContentDisposition(contentDisposition))
                             {
+                                ModelState.AddModelError("File", "The request couldn't be processed (Error 2)");
+                                logger.LogWarning("The request couldn't be processed (Error 2)");
+                                return BadRequest(ModelState);
+                            }
+                            else
+                            {
+                                // Don't trust the file name sent by the client. To display
+                                // the file name, HTML-encode the value.
+                                using (var streamedFileContent = await FileHelpers.ProcessStreamedFile(logger,
+                                    section, contentDisposition, ModelState,
+                                    new[] { ".jpg", ".jpeg" }, 1024 * 1024 * 6)) // max 4MB file
+                                {
 
-                                if (!ModelState.IsValid)
-                                {
-                                    return BadRequest(ModelState);
-                                }
+                                    if (!ModelState.IsValid)
+                                    {
 
-                                try
-                                {
-                                    imagesManager.SaveImage(dataSource, contentDisposition.FileName.Value, streamedFileContent);
-                                }
-                                catch
-                                {
-                                    return BadRequest("Image procession failed");
+                                        logger.LogWarning($"Invalid model state");
+                                        foreach (var pair in ModelState)
+                                        {
+                                            foreach (var error in pair.Value.Errors)
+                                            {
+                                                logger.LogError($"{pair.Key}: {error.ErrorMessage}");
+                                            }
+                                        }
+                                        return BadRequest(ModelState);
+                                    }
+
+                                    try
+                                    {
+                                        logger.LogDebug($"Saving image {contentDisposition.FileName.Value}");
+                                        imagesManager.SaveImage(dataSource, contentDisposition.FileName.Value, streamedFileContent);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        logger.LogError(ex, "Failed saving image");
+                                        return BadRequest("Image procession failed");
+                                    }
                                 }
                             }
                         }
+
+                        // Drain any remaining section body that hasn't been consumed and
+                        // read the headers for the next section.
+                        section = await reader.ReadNextSectionAsync();
                     }
+                    logger.LogDebug("Done reading sections");
 
-                    // Drain any remaining section body that hasn't been consumed and
-                    // read the headers for the next section.
-                    section = await reader.ReadNextSectionAsync();
+                    return Created(nameof(ImagesController), null);
                 }
-
-                return Created(nameof(ImagesController), null);
+                else
+                {
+                    logger.LogWarning($"No data source found for given {country}/{city}");
+                    return NotFound();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return NotFound();
+                logger.LogError(ex, "Failed processing file");
+                throw;
             }
         }
     }

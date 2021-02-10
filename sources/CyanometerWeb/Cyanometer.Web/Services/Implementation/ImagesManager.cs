@@ -3,6 +3,7 @@ using Cyanometer.Web.Models;
 using Cyanometer.Web.Services.Abstract;
 using Cyanometer.Web.Utilities;
 using Flurl;
+using Humanizer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.FileProviders;
@@ -44,10 +45,12 @@ namespace Cyanometer.Web.Services.Implementation
             var fileProvider = webHostEnvironment.WebRootFileProvider;
 
             bool isToday = true;
-            while (path != null)
+            logger.LogDebug($"Checking images for {fileProvider.GetFileInfo(Path.Combine("cyano", path)).PhysicalPath}");
+            var end = now.AddYears(-1);
+            while (now > end)
             {
-                string uriPath = GetRelativeUriPathForDate(source, now);
                 var content = fileProvider.GetDirectoryContents(Path.Combine("cyano", path));
+                string uriPath = GetRelativeUriPathForDate(source, now);
                 var images = imagesFileManager.ReadMetaForDate(source, content, uriPath, isToday);
                 foreach (var image in images.OrderByDescending(i => i.Date))
                 {
@@ -69,6 +72,7 @@ namespace Cyanometer.Web.Services.Implementation
         {
             string safeFileName = Path.GetFileName(fileName);
             DateTimeOffset takenAt = DateFromFileName(safeFileName);
+            logger.LogDebug($"File date is {takenAt}");
             using (var image = Image.Load<Rgba32>(stream))
             using (var thumb = image.Clone())
             {
@@ -78,6 +82,7 @@ namespace Cyanometer.Web.Services.Implementation
                                 takenAt,
                                 calculator.GetBluenessIndexTopPixels(colors, 30).Index
                             );
+                logger.LogDebug("Thumbnail created, saving");
                 var fileProvider =(PhysicalFileProvider)webHostEnvironment.WebRootFileProvider;
                 imagesFileManager.SaveImage(source, fileProvider.Root, image, thumb, info, safeFileName);
             }

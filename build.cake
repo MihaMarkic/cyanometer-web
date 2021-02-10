@@ -7,10 +7,10 @@ var push = Argument<bool>("push", false);
 var dokreg = Argument<string>("dokreg", "mihamarkic");
 var setVersion = Argument<string>("buildVersion", null);
 
-var rootDirectory = Directory("./sources/SloCovidServer");
-var solution = rootDirectory + File("SloCovidServer.sln");
-var appDirectory = rootDirectory + Directory("SloCovidServer"); 
-var appProject = appDirectory + File("SloCovidServer.csproj");
+var rootDirectory = Directory("./sources/CyanometerWeb");
+var solution = rootDirectory + File("CyanometerWeb.sln");
+var appDirectory = rootDirectory + Directory("CyanometerWeb"); 
+var appProject = appDirectory + File("CyanometerWeb.csproj");
  
 var versionFile = Directory(".") + File("version.xml");
 const string versionsRoot = "version";
@@ -18,7 +18,7 @@ const string versionsRoot = "version";
 Task("BuildImage")
 	.Does(() =>{
 		string version = GetVersion();
-		BuildAndPush("slo-covid19-server", new []{ "latest", version });
+		BuildAndPush("cyanometer-server", new []{ "latest", version });
 	});
 
 void BuildAndPush(string tag, string[] tagSuffixes)
