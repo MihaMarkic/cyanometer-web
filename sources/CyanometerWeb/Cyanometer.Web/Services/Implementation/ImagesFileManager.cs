@@ -49,7 +49,7 @@ namespace Cyanometer.Web.Services.Implementation
             return new ImageMeta(
                             Url.Combine("/", WwwRoot, uriPath, $"{fileName}.jpg"),
                             Url.Combine("/", WwwRoot, uriPath, $"thumb-{fileName}.jpg"),
-                            new DateTimeOffset(new DateTime(info.Date.Year, info.Date.Month, info.Date.Day, info.Date.Hour, info.Date.Minute, info.Date.Day)),
+                            info.Date,
                             info.BluenessIndex
                         );
         }

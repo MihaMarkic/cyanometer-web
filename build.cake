@@ -1,4 +1,4 @@
-#addin nuget:?package=Cake.Docker&version=0.11.0
+#addin nuget:?package=Cake.Docker&version=1.0.0
 using System.Xml.Linq;
 
 var target = Argument("target", "Default");
