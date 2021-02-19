@@ -23,7 +23,7 @@ function loaded(country, city, pollutionMeasurement, pollutionColor, pollutionTe
         success: (data) => {
             images = data.images;
             averageBlueness = data.averageBlueness;
-            mainImageIndex = 1;
+            mainImageIndex = 0;
             mainImage = images[mainImageIndex];
             populatePie();
             updateMainImage();
@@ -39,7 +39,7 @@ function loaded(country, city, pollutionMeasurement, pollutionColor, pollutionTe
 function updateMainImage() {
     highlightCurrentImage(mainImage);
     $("#mainLocation").text(`${mainImage.city}, ${mainImage.country} SKY`);
-    $("#mainTakenAt").text(moment(mainImage.takenAt).format(dateMask));
+    $("#mainTakenAt").text(moment.utc(mainImage.takenAt).format(dateMask));
 }
 
 function showLoadingGif() {
@@ -60,7 +60,7 @@ const MaxImagesPerRow = 6;
 var loadedImages = [];
 function loadImage(image, index, row1, row2, count) {
     var path = image.thumbnailUrl;
-    var takenAt = moment(image.takenAt).format("HH:mm");
+    var takenAt = moment.utc(image.takenAt).format("HH:mm");
     var imageId = `image${image.id}`;
     //$(`<img src="${path}"></img>`).load(function () {
     var div = $(`
@@ -198,7 +198,7 @@ function populatePie() {
 
 function createSlice(index, image, matrix) {
     var foreColor = parseColor(bc[image.bluenessIndex]);
-    var title = moment(image.takenAt).format(dateMask) + ", blueness index " + image.bluenessIndex;
+    var title = moment.utc(image.takenAt).format(dateMask) + ", blueness index " + image.bluenessIndex;
     var selectedClass;
     if (index === mainImageIndex) {
         selectedClass = " selected-slice";
