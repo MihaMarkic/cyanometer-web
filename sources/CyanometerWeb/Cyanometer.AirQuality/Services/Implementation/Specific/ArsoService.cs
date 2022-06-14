@@ -32,7 +32,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
                 try
                 {
                     XDocument doc = await GetDataAsync(ct);
-                    return ParseData(doc, "E21");
+                    return ParseData(doc, "E403");
                 }
                 catch (Exception ex)
                 {
