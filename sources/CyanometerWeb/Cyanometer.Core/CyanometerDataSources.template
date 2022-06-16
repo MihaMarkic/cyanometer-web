@@ -1,0 +1,8 @@
+﻿namespace Cyanometer.Core
+{
+    partial class CyanometerDataSources
+    {
+        public readonly string LjubljanaToken = "***";
+        public readonly string WroclawToken = "***";
+    }
+}

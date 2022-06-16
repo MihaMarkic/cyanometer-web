@@ -32,6 +32,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
                 try
                 {
                     XDocument doc = await GetDataAsync(ct);
+                    ce.SetAbsoluteExpiration(TimeSpan.FromMinutes(5));
                     return ParseData(doc, "E403");
                 }
                 catch (Exception ex)
