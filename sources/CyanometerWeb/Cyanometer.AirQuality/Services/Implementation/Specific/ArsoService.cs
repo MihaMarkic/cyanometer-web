@@ -24,8 +24,12 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
         }
         public string DataSourceInfo => "ARSO Ljubljana Bežigrad";
         public string DataSourceUri => "https://www.arso.gov.si/";
-        public async Task<AirQualityData> GetIndexAsync(CancellationToken ct)
+        public async Task<AirQualityData> GetIndexAsync(string locationId, CancellationToken ct)
         {
+            if (string.IsNullOrEmpty(locationId))
+            {
+                throw new ArgumentNullException(nameof(locationId));
+            }
             var result = await cache.GetOrCreateAsync(CacheKeys.ArsoData, async ce =>
             {
                 logger.LogInformation("Starting retrieving arso data");
@@ -33,7 +37,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
                 {
                     XDocument doc = await GetDataAsync(ct);
                     ce.SetAbsoluteExpiration(TimeSpan.FromMinutes(5));
-                    return ParseData(doc, "E403");
+                    return ParseData(doc, locationId);
                 }
                 catch (Exception ex)
                 {

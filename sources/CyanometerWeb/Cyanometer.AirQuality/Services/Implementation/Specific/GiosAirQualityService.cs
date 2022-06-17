@@ -29,7 +29,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
         }
         public string DataSourceInfo => "Voivodship Inspectorates for Environmental Protection";
         public string DataSourceUri => "http://www.gios.gov.pl/en/";
-        public async Task<AirQualityData> GetIndexAsync(CancellationToken ct)
+        public async Task<AirQualityData> GetIndexAsync(string locationId, CancellationToken ct)
         {
             var result = await cache.GetOrCreateAsync(CacheKeys.GiosData, async ce =>
             {

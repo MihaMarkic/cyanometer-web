@@ -14,15 +14,21 @@ namespace Cyanometer.Core
     {
         public const string Wroclaw = "poland/wroclaw";
         public const string Ljubljana = "slovenia/ljubljana";
+        public const string Dresden = "germany/dresden";
+        public const string Geneva = "switzerland/geneva";
         public static CyanometerDataSources Default { get; } = new CyanometerDataSources();
         public ImmutableDictionary<string, CyanometerDataSource> Data { get; }
         CyanometerDataSources()
         {
             Data = ImmutableDictionary.Create<string, CyanometerDataSource>(StringComparer.OrdinalIgnoreCase)
                 .Add(Ljubljana, new CyanometerDataSource(Guid.Parse(LjubljanaToken), "Slovenia", "Ljubljana", 
-                    AirQualitySource.Arso, Ljubljana, "Central-Square", airQualityLocation: "E21"))
+                    AirQualitySource.Arso, Ljubljana, "Central-Square", airQualityLocation: "E403"))
                 .Add(Wroclaw, new CyanometerDataSource(Guid.Parse(WroclawToken), "Poland", "Wroclaw", 
-                    AirQualitySource.Gios, Wroclaw, "University-Library", airQualityLocation: null));
+                    AirQualitySource.Gios, Wroclaw, "University-Library", airQualityLocation: null))
+                .Add(Dresden, new CyanometerDataSource(Guid.Parse(DresdenToken), "Germany", "Dresden",
+                    AirQualitySource.Sachsen, Dresden, "University-Library", airQualityLocation: "DESN083"))
+                .Add(Geneva, new CyanometerDataSource(Guid.Parse(GenevaToken), "Switzerland", "Geneva",
+                    AirQualitySource.Geneva, Geneva, "University-Library", airQualityLocation: null));
         }
         public CyanometerDataSource GetData(string city, string country)
         {

@@ -53,7 +53,7 @@ namespace Cyanometer.Web.Pages
             AirQualityLink = service.DataSourceUri;
             AirQualityPollutionCalculated calculated = await memoryCache.GetOrCreateAsync(key, async entry =>
             {
-                var rawPollution = await service.GetIndexAsync(CancellationToken.None);
+                var rawPollution = await service.GetIndexAsync(cyanometerDataSource.AirQualityLocation, CancellationToken.None);
                 calculated = airQualityProcessor.Calculate(rawPollution);
                 entry.SetAbsoluteExpiration(DateTimeOffset.Now.AddMinutes(15));
                 return calculated;
