@@ -10,8 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B66A4D5D-330E-4B89-996F-E4CDEEFD1A6C}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\.gitignore = ..\..\.gitignore
-		..\..\build.ps1 = ..\..\build.ps1
 		..\..\appbuild.cake = ..\..\appbuild.cake
+		..\..\build.ps1 = ..\..\build.ps1
 		Dockerfile = Dockerfile
 		..\..\version.xml = ..\..\version.xml
 	EndProjectSection
@@ -19,6 +19,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cyanometer.AirQuality", "Cyanometer.AirQuality\Cyanometer.AirQuality.csproj", "{489E72EB-2E39-430A-A0B1-0694BC936C6E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cyanometer.WebTest", "Test\Cyanometer.WebTest\Cyanometer.WebTest.csproj", "{9925340F-3534-4F26-942B-A21C9FA5EBB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F1DB46D4-6C40-4DFD-93FF-47F659F4CD2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyanometer.AirQualityTest", "Test\Cyanometer.AirQualityTest\Cyanometer.AirQualityTest.csproj", "{FA6A6D01-7A56-4505-8F53-8F7CD97FF8CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,9 +46,17 @@ Global
 		{9925340F-3534-4F26-942B-A21C9FA5EBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9925340F-3534-4F26-942B-A21C9FA5EBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9925340F-3534-4F26-942B-A21C9FA5EBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6A6D01-7A56-4505-8F53-8F7CD97FF8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6A6D01-7A56-4505-8F53-8F7CD97FF8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6A6D01-7A56-4505-8F53-8F7CD97FF8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6A6D01-7A56-4505-8F53-8F7CD97FF8CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9925340F-3534-4F26-942B-A21C9FA5EBB9} = {F1DB46D4-6C40-4DFD-93FF-47F659F4CD2C}
+		{FA6A6D01-7A56-4505-8F53-8F7CD97FF8CA} = {F1DB46D4-6C40-4DFD-93FF-47F659F4CD2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F1F66B7-E291-41A1-B4C5-5F8D4367F3E2}

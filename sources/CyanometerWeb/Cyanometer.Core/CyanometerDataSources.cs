@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Immutable;
+using System.Diagnostics;
 using System.IO;
 
 namespace Cyanometer.Core
@@ -26,9 +27,9 @@ namespace Cyanometer.Core
                 .Add(Wroclaw, new CyanometerDataSource(Guid.Parse(WroclawToken), "Poland", "Wroclaw", 
                     AirQualitySource.Gios, Wroclaw, "University-Library", airQualityLocation: null))
                 .Add(Dresden, new CyanometerDataSource(Guid.Parse(DresdenToken), "Germany", "Dresden",
-                    AirQualitySource.Sachsen, Dresden, "University-Library", airQualityLocation: "DESN083"))
+                    AirQualitySource.Sachsen, Dresden, "Technical-Museum", airQualityLocation: "DESN083"))
                 .Add(Geneva, new CyanometerDataSource(Guid.Parse(GenevaToken), "Switzerland", "Geneva",
-                    AirQualitySource.Geneva, Geneva, "University-Library", airQualityLocation: null));
+                    AirQualitySource.Sabra, Geneva, "History-And-Science-Museum", airQualityLocation: null));
         }
         public CyanometerDataSource GetData(string city, string country)
         {
@@ -39,7 +40,7 @@ namespace Cyanometer.Core
             return null;
         }
     }
-
+    [DebuggerDisplay("{Country,nq}/{City,nq}")]
     public class CyanometerDataSource
     {
         public Guid Id { get; }

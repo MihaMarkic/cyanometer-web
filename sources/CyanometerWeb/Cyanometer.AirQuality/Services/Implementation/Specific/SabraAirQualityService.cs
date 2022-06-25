@@ -40,7 +40,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
                 {
                     XDocument doc = await GetDataAsync(ct);
                     ce.SetAbsoluteExpiration(TimeSpan.FromMinutes(5));
-                    return ParseData(doc, locationId);
+                    return ParseData(logger, doc, locationId);
                 }
                 catch (Exception ex)
                 {
@@ -51,19 +51,20 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
             return result;
         }
 
-        public AirQualityData ParseData(XDocument doc, string stationCode)
+        public static AirQualityData ParseData(ILogger logger, XDocument doc, string stationCode)
         {
             var root = doc.Root.Element("messstation").Element("messstellengruppe").Element("messstelle");
             return new AirQualityData
             {
-                NO2 = GetValueFor(root, "NO2"),
-                O3 = GetValueFor(root, "O3"),
-                PM10 = GetValueFor(root, "PM10"),
+                Date = GetDate(logger, doc.Root),
+                NO2 = GetValueFor(logger, root, "NO2"),
+                O3 = GetValueFor(logger, root, "O3"),
+                PM10 = GetValueFor(logger, root, "PM10"),
                 SO2 = null,
             };
         }
 
-        public double? GetValueFor(XElement root, string groupType)
+        public static double? GetValueFor(ILogger logger, XElement root, string groupType)
         {
             try
             {
@@ -71,7 +72,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
                     .Where(e => string.Equals((string)e.Attribute("kanalgruppetyp"), groupType, StringComparison.Ordinal))
                     .Single()
                     .Element("kanal");
-                var lastRecord = channel.Elements().Last();
+                var lastRecord = channel.Elements().Where(e => e.Attribute("wert") is not null).Last();
                 return double.Parse((string)lastRecord.Attribute("wert"), CultureInfo.InvariantCulture);
             }
             catch (Exception ex)
@@ -79,6 +80,11 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
                 logger.LogError(ex, $"Couldn't parse value {root.Value} for code {groupType}");
                 return null;
             }
+        }
+
+        public static DateTime GetDate(ILogger logger, XElement root)
+        {
+            return DateTime.Parse((string)root.Attribute("ende"), new CultureInfo("ch"));
         }
 
         public async Task<XDocument> GetDataAsync(CancellationToken ct)

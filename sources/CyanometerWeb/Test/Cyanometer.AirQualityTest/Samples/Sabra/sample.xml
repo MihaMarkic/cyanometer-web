@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<selektion name="Necker_xml" beginn="23.06.2022 11:00:00" ende="24.06.2022 11:00:00">
+  <messstation kurzname="Necker" name="NECK" projekt="" bemerkung="" strassenabstand="" messhoehe="" laendercode="" messstationsnummer="412209" koord_x="2499864" koord_y="1118200" eua_name="">
+    <messstellengruppe kurzname="Airmet" name="Airmet">
+      <messstelle kurzname="Airmet" name="Airmet" messstellendruck="1013.25" messstellentemperatur="20">
+        <kanalgruppe name="" beschreibung="" kanalgruppetyp="NO2" kanalgruppetyp_displayname="Nitrogen dioxyde" segment="Luft/Meteo">
+          <kanal kanal_id="0" einheit_kurzname="�g/m3" einheit_name="Konzentration: versch. Normdrucke und -temp. m�glich [�g pro m3]" einheit_displayname="�g/m3" zeitfenster_kurzname="h1" zeitfenster_name="h1" zeitfenster_displayname="Hourly mean" bemerkung="" element="Alle " messgroesse_typ="inorganic gases" messgroesse_kurzname="NO2" messgroesse_name="Nitrogen dioxide" messgroesse_displayname="Nitrogen dioxide" messgroesse_name2="2" messgroesse_isocode="03" kanalset="Alle" klassen_nr="">
+            <messwert startzeit="23.06.2022 12:00:00" endzeit="23.06.2022 13:00:00" wert="14.4413560343318" status="0" />
+            <messwert startzeit="23.06.2022 13:00:00" endzeit="23.06.2022 14:00:00" wert="15.6846515869564" status="0" />
+            <messwert startzeit="23.06.2022 14:00:00" endzeit="23.06.2022 15:00:00" wert="20.2752813197242" status="0" />
+            <messwert startzeit="23.06.2022 15:00:00" endzeit="23.06.2022 16:00:00" wert="21.9011293500794" status="0" />
+            <messwert startzeit="23.06.2022 16:00:00" endzeit="23.06.2022 17:00:00" wert="30.6998363378843" status="0" />
+            <messwert startzeit="23.06.2022 17:00:00" endzeit="23.06.2022 18:00:00" wert="19.8927288419935" status="0" />
+            <messwert startzeit="23.06.2022 18:00:00" endzeit="23.06.2022 19:00:00" wert="27.2568640383085" status="0" />
+            <messwert startzeit="23.06.2022 19:00:00" endzeit="23.06.2022 20:00:00" wert="38.3508858924972" status="0" />
+            <messwert startzeit="23.06.2022 20:00:00" endzeit="23.06.2022 21:00:00" wert="27.1612259188758" status="0" />
+            <messwert startzeit="23.06.2022 21:00:00" endzeit="23.06.2022 22:00:00" wert="26.6830353217125" status="0" />
+            <messwert startzeit="23.06.2022 22:00:00" endzeit="23.06.2022 23:00:00" wert="31.1780269350476" status="0" />
+            <messwert startzeit="23.06.2022 23:00:00" endzeit="24.06.2022 00:00:00" wert="25.6310160079532" status="0" />
+            <messwert startzeit="24.06.2022 00:00:00" endzeit="24.06.2022 01:00:00" wert="25.1528254107899" status="0" />
+            <messwert startzeit="24.06.2022 01:00:00" endzeit="24.06.2022 02:00:00" wert="18.9363476476669" status="0" />
+            <messwert startzeit="24.06.2022 02:00:00" endzeit="24.06.2022 03:00:00" wert="12.3373174068133" status="0" />
+            <messwert startzeit="24.06.2022 03:00:00" endzeit="24.06.2022 04:00:00" wert="8.22487827120887" status="0" />
+            <messwert startzeit="24.06.2022 04:00:00" endzeit="24.06.2022 05:00:00" wert="12.6242317651113" status="0" />
+            <messwert startzeit="24.06.2022 05:00:00" endzeit="24.06.2022 06:00:00" wert="20.2752813197242" status="0" />
+            <messwert startzeit="24.06.2022 06:00:00" endzeit="24.06.2022 07:00:00" wert="30.6998363378843" status="0" />
+            <messwert startzeit="24.06.2022 07:00:00" endzeit="24.06.2022 08:00:00" wert="40.933115117179" status="0" />
+            <messwert startzeit="24.06.2022 08:00:00" endzeit="24.06.2022 09:00:00" wert="36.151209145546" status="0" />
+            <messwert startzeit="24.06.2022 09:00:00" endzeit="24.06.2022 10:00:00" wert="37.8726952953339" status="0" />
+            <messwert startzeit="24.06.2022 10:00:00" endzeit="24.06.2022 11:00:00" wert="42.9415156252649" status="0" />
+            <messwert startzeit="24.06.2022 11:00:00" endzeit="24.06.2022 12:00:00" />
+          </kanal>
+        </kanalgruppe>
+        <kanalgruppe name="" beschreibung="" kanalgruppetyp="O3" kanalgruppetyp_displayname="Ozon" segment="Luft/Meteo">
+          <kanal kanal_id="1" einheit_kurzname="�g/m3" einheit_name="Konzentration: versch. Normdrucke und -temp. m�glich [�g pro m3]" einheit_displayname="�g/m3" zeitfenster_kurzname="h1" zeitfenster_name="h1" zeitfenster_displayname="Hourly mean" bemerkung="" element="Alle " messgroesse_typ="inorganic gases" messgroesse_kurzname="O3" messgroesse_name="Ozone" messgroesse_displayname="Ozone" messgroesse_name2="3" messgroesse_isocode="08" kanalset="Alle" klassen_nr="">
+            <messwert startzeit="23.06.2022 12:00:00" endzeit="23.06.2022 13:00:00" wert="82.9127026102197" status="0" />
+            <messwert startzeit="23.06.2022 13:00:00" endzeit="23.06.2022 14:00:00" wert="84.7086456270476" status="0" />
+            <messwert startzeit="23.06.2022 14:00:00" endzeit="23.06.2022 15:00:00" wert="84.4093217909096" status="0" />
+            <messwert startzeit="23.06.2022 15:00:00" endzeit="23.06.2022 16:00:00" wert="89.6973762293472" status="0" />
+            <messwert startzeit="23.06.2022 16:00:00" endzeit="23.06.2022 17:00:00" wert="77.6246481717821" status="0" />
+            <messwert startzeit="23.06.2022 17:00:00" endzeit="23.06.2022 18:00:00" wert="71.7379460610686" status="0" />
+            <messwert startzeit="23.06.2022 18:00:00" endzeit="23.06.2022 19:00:00" wert="63.1573294251132" status="0" />
+            <messwert startzeit="23.06.2022 19:00:00" endzeit="23.06.2022 20:00:00" wert="48.6900106784443" status="0" />
+            <messwert startzeit="23.06.2022 20:00:00" endzeit="23.06.2022 21:00:00" wert="52.1821221000541" status="0" />
+            <messwert startzeit="23.06.2022 21:00:00" endzeit="23.06.2022 22:00:00" wert="45.0981246447886" status="0" />
+            <messwert startzeit="23.06.2022 22:00:00" endzeit="23.06.2022 23:00:00" wert="36.5175080088332" status="0" />
+            <messwert startzeit="23.06.2022 23:00:00" endzeit="24.06.2022 00:00:00" wert="41.0073655509029" status="0" />
+            <messwert startzeit="24.06.2022 00:00:00" endzeit="24.06.2022 01:00:00" wert="23.8461322789922" status="0" />
+            <messwert startzeit="24.06.2022 01:00:00" endzeit="24.06.2022 02:00:00" wert="23.6465830549002" status="0" />
+            <messwert startzeit="24.06.2022 02:00:00" endzeit="24.06.2022 03:00:00" wert="32.7260727510855" status="0" />
+            <messwert startzeit="24.06.2022 03:00:00" endzeit="24.06.2022 04:00:00" wert="42.4042101195468" status="0" />
+            <messwert startzeit="24.06.2022 04:00:00" endzeit="24.06.2022 05:00:00" wert="31.5287774065336" status="0" />
+            <messwert startzeit="24.06.2022 05:00:00" endzeit="24.06.2022 06:00:00" wert="32.8258473631315" status="0" />
+            <messwert startzeit="24.06.2022 06:00:00" endzeit="24.06.2022 07:00:00" wert="26.63982141628" status="0" />
+            <messwert startzeit="24.06.2022 07:00:00" endzeit="24.06.2022 08:00:00" wert="14.8664171948529" status="0" />
+            <messwert startzeit="24.06.2022 08:00:00" endzeit="24.06.2022 09:00:00" wert="8.68039124800134" status="0" />
+            <messwert startzeit="24.06.2022 09:00:00" endzeit="24.06.2022 10:00:00" wert="21.1522177537504" status="0" />
+            <messwert startzeit="24.06.2022 10:00:00" endzeit="24.06.2022 11:00:00" wert="22.0501892621643" status="0" />
+            <messwert startzeit="24.06.2022 11:00:00" endzeit="24.06.2022 12:00:00" />
+          </kanal>
+        </kanalgruppe>
+        <kanalgruppe name="" beschreibung="" kanalgruppetyp="PM10" kanalgruppetyp_displayname="Fine particles (PM10)" segment="Luft/Meteo">
+          <kanal kanal_id="2" einheit_kurzname="�g/m3" einheit_name="Konzentration: versch. Normdrucke und -temp. m�glich [�g pro m3]" einheit_displayname="�g/m3" zeitfenster_kurzname="h1" zeitfenster_name="h1" zeitfenster_displayname="Hourly mean" bemerkung="" element="Alle " messgroesse_typ="Fine dust" messgroesse_kurzname="PM10" messgroesse_name="Fine particles cut-off 10 �m" messgroesse_displayname="Fine particles cut-off 10 �m" messgroesse_name2="1" messgroesse_isocode="24" kanalset="Alle" klassen_nr="">
+            <messwert startzeit="23.06.2022 12:00:00" endzeit="23.06.2022 13:00:00" wert="19.9" status="0" />
+            <messwert startzeit="23.06.2022 13:00:00" endzeit="23.06.2022 14:00:00" wert="20.15" status="0" />
+            <messwert startzeit="23.06.2022 14:00:00" endzeit="23.06.2022 15:00:00" wert="23.65" status="0" />
+            <messwert startzeit="23.06.2022 15:00:00" endzeit="23.06.2022 16:00:00" wert="34.1" status="0" />
+            <messwert startzeit="23.06.2022 16:00:00" endzeit="23.06.2022 17:00:00" wert="39.2" status="0" />
+            <messwert startzeit="23.06.2022 17:00:00" endzeit="23.06.2022 18:00:00" wert="27.6" status="0" />
+            <messwert startzeit="23.06.2022 18:00:00" endzeit="23.06.2022 19:00:00" wert="18.25" status="0" />
+            <messwert startzeit="23.06.2022 19:00:00" endzeit="23.06.2022 20:00:00" wert="18.45" status="0" />
+            <messwert startzeit="23.06.2022 20:00:00" endzeit="23.06.2022 21:00:00" wert="18.45" status="0" />
+            <messwert startzeit="23.06.2022 21:00:00" endzeit="23.06.2022 22:00:00" wert="19.5" status="0" />
+            <messwert startzeit="23.06.2022 22:00:00" endzeit="23.06.2022 23:00:00" wert="19.4" status="0" />
+            <messwert startzeit="23.06.2022 23:00:00" endzeit="24.06.2022 00:00:00" wert="17.15" status="0" />
+            <messwert startzeit="24.06.2022 00:00:00" endzeit="24.06.2022 01:00:00" wert="17.9" status="0" />
+            <messwert startzeit="24.06.2022 01:00:00" endzeit="24.06.2022 02:00:00" wert="19.8" status="0" />
+            <messwert startzeit="24.06.2022 02:00:00" endzeit="24.06.2022 03:00:00" wert="19.2" status="0" />
+            <messwert startzeit="24.06.2022 03:00:00" endzeit="24.06.2022 04:00:00" wert="20.25" status="0" />
+            <messwert startzeit="24.06.2022 04:00:00" endzeit="24.06.2022 05:00:00" wert="17" status="0" />
+            <messwert startzeit="24.06.2022 05:00:00" endzeit="24.06.2022 06:00:00" wert="16.85" status="0" />
+            <messwert startzeit="24.06.2022 06:00:00" endzeit="24.06.2022 07:00:00" wert="15.2" status="0" />
+            <messwert startzeit="24.06.2022 07:00:00" endzeit="24.06.2022 08:00:00" wert="15.95" status="0" />
+            <messwert startzeit="24.06.2022 08:00:00" endzeit="24.06.2022 09:00:00" wert="28.7" status="0" />
+            <messwert startzeit="24.06.2022 09:00:00" endzeit="24.06.2022 10:00:00" wert="17.75" status="0" />
+            <messwert startzeit="24.06.2022 10:00:00" endzeit="24.06.2022 11:00:00" wert="12.75" status="0" />
+            <messwert startzeit="24.06.2022 11:00:00" endzeit="24.06.2022 12:00:00" />
+          </kanal>
+        </kanalgruppe>
+        <kanalgruppe name="" beschreibung="" kanalgruppetyp="PM2.5" kanalgruppetyp_displayname="Fine particules (PM2.5)" segment="Luft/Meteo">
+          <kanal kanal_id="3" einheit_kurzname="�g/m3" einheit_name="Konzentration: versch. Normdrucke und -temp. m�glich [�g pro m3]" einheit_displayname="�g/m3" zeitfenster_kurzname="h1" zeitfenster_name="h1" zeitfenster_displayname="Hourly mean" bemerkung="" element="Alle " messgroesse_typ="_nd" messgroesse_kurzname="PM2.5" messgroesse_name="Fine particles cut-off 2.5�m" messgroesse_displayname="Fine particles cut-off 2.5�m" messgroesse_name2="" messgroesse_isocode="" kanalset="Vertikale Verdichtung" klassen_nr="">
+            <messwert startzeit="23.06.2022 12:00:00" endzeit="23.06.2022 13:00:00" wert="10.2" status="0" />
+            <messwert startzeit="23.06.2022 13:00:00" endzeit="23.06.2022 14:00:00" wert="9.9" status="0" />
+            <messwert startzeit="23.06.2022 14:00:00" endzeit="23.06.2022 15:00:00" wert="10.3" status="0" />
+            <messwert startzeit="23.06.2022 15:00:00" endzeit="23.06.2022 16:00:00" wert="14.05" status="0" />
+            <messwert startzeit="23.06.2022 16:00:00" endzeit="23.06.2022 17:00:00" wert="15.55" status="0" />
+            <messwert startzeit="23.06.2022 17:00:00" endzeit="23.06.2022 18:00:00" wert="11.75" status="0" />
+            <messwert startzeit="23.06.2022 18:00:00" endzeit="23.06.2022 19:00:00" wert="8.15" status="0" />
+            <messwert startzeit="23.06.2022 19:00:00" endzeit="23.06.2022 20:00:00" wert="9" status="0" />
+            <messwert startzeit="23.06.2022 20:00:00" endzeit="23.06.2022 21:00:00" wert="9.2" status="0" />
+            <messwert startzeit="23.06.2022 21:00:00" endzeit="23.06.2022 22:00:00" wert="10.1" status="0" />
+            <messwert startzeit="23.06.2022 22:00:00" endzeit="23.06.2022 23:00:00" wert="10.2" status="0" />
+            <messwert startzeit="23.06.2022 23:00:00" endzeit="24.06.2022 00:00:00" wert="8.65" status="0" />
+            <messwert startzeit="24.06.2022 00:00:00" endzeit="24.06.2022 01:00:00" wert="8.75" status="0" />
+            <messwert startzeit="24.06.2022 01:00:00" endzeit="24.06.2022 02:00:00" wert="9.25" status="0" />
+            <messwert startzeit="24.06.2022 02:00:00" endzeit="24.06.2022 03:00:00" wert="9" status="0" />
+            <messwert startzeit="24.06.2022 03:00:00" endzeit="24.06.2022 04:00:00" wert="9.25" status="0" />
+            <messwert startzeit="24.06.2022 04:00:00" endzeit="24.06.2022 05:00:00" wert="7.95" status="0" />
+            <messwert startzeit="24.06.2022 05:00:00" endzeit="24.06.2022 06:00:00" wert="7.75" status="0" />
+            <messwert startzeit="24.06.2022 06:00:00" endzeit="24.06.2022 07:00:00" wert="7.15" status="0" />
+            <messwert startzeit="24.06.2022 07:00:00" endzeit="24.06.2022 08:00:00" wert="7.45" status="0" />
+            <messwert startzeit="24.06.2022 08:00:00" endzeit="24.06.2022 09:00:00" wert="10.85" status="0" />
+            <messwert startzeit="24.06.2022 09:00:00" endzeit="24.06.2022 10:00:00" wert="8.05" status="0" />
+            <messwert startzeit="24.06.2022 10:00:00" endzeit="24.06.2022 11:00:00" wert="6.65" status="0" />
+            <messwert startzeit="24.06.2022 11:00:00" endzeit="24.06.2022 12:00:00" />
+          </kanal>
+        </kanalgruppe>
+      </messstelle>
+    </messstellengruppe>
+  </messstation>
+</selektion>
