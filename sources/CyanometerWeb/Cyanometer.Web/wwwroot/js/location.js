@@ -165,7 +165,7 @@ function populatePie() {
     var pie = `
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2 -2 504 504" id="menu">
     <g id="itemsContainer">`;
-    for (i = 0; i < 12; i++) {
+    for (i = 0; i < Math.min(12, images.length); i++) {
         pie = pie + createSlice(i, images[i], matrices[i]);
     }
     pie = pie + `
