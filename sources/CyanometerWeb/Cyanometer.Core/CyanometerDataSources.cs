@@ -22,13 +22,13 @@ namespace Cyanometer.Core
         CyanometerDataSources()
         {
             Data = ImmutableDictionary.Create<string, CyanometerDataSource>(StringComparer.OrdinalIgnoreCase)
-                .Add(Ljubljana, new CyanometerDataSource(Guid.Parse(LjubljanaToken), "Slovenia", "Ljubljana", 
+                .Add(Ljubljana, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Ljubljana), "Slovenia", "Ljubljana", 
                     AirQualitySource.Arso, Ljubljana, "Central-Square", airQualityLocation: "E403"))
-                .Add(Wroclaw, new CyanometerDataSource(Guid.Parse(WroclawToken), "Poland", "Wroclaw", 
+                .Add(Wroclaw, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Wroclaw), "Poland", "Wroclaw", 
                     AirQualitySource.Gios, Wroclaw, "University-Library", airQualityLocation: null))
-                .Add(Dresden, new CyanometerDataSource(Guid.Parse(DresdenToken), "Germany", "Dresden",
+                .Add(Dresden, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Dresden), "Germany", "Dresden",
                     AirQualitySource.Sachsen, Dresden, "Technical-Museum", airQualityLocation: "DESN083"))
-                .Add(Geneva, new CyanometerDataSource(Guid.Parse(GenevaToken), "Switzerland", "Geneva",
+                .Add(Geneva, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Geneva), "Switzerland", "Geneva",
                     AirQualitySource.Sabra, Geneva, "History-And-Science-Museum", airQualityLocation: null));
         }
         public CyanometerDataSource GetData(string city, string country)

@@ -9,56 +9,77 @@ using Cyanometer.Core.Extensions;
 using Cyanometer.AirQuality.Extensions;
 using Cyanometer.Web.Services.Implementation;
 using Cyanometer.Web.Services.Abstract;
+using Cyanometer.Core;
+using Microsoft.Extensions.Logging;
 
-namespace Cyanometer.Web
+namespace Cyanometer.Web;
+
+public class Startup
 {
-    public class Startup
+    public Startup(IConfiguration configuration)
     {
-        public Startup(IConfiguration configuration)
+        Configuration = configuration;
+    }
+
+    public IConfiguration Configuration { get; }
+
+    // This method gets called by the runtime. Use this method to add services to the container.
+    public void ConfigureServices(IServiceCollection services)
+    {
+        var physicalProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
+        services.AddSingleton(physicalProvider);
+        services.AddCyanoCore();
+        services.AddAirQuality();
+        services.AddSingleton<IImagesFileManager, ImagesFileManager>();
+        services.AddSingleton<IImagesManager, ImagesManager>();
+
+        services.AddRazorPages();
+        services.AddControllers();
+    }
+
+    static string DumpToken(string token)
+    {
+        if (token?.Length > 0)
         {
-            Configuration = configuration;
+            return token[0..1];
         }
-
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        return "-";
+    }
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
+    { 
+        if (env.IsDevelopment())
         {
-            var physicalProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
-            services.AddSingleton(physicalProvider);
-            services.AddCyanoCore();
-            services.AddAirQuality();
-            services.AddSingleton<IImagesFileManager, ImagesFileManager>();
-            services.AddSingleton<IImagesManager, ImagesManager>();
-
-            services.AddRazorPages();
-            services.AddControllers();
+            app.UseDeveloperExceptionPage();
+            // dev tokens
+            UploadTokens.Init(
+                "C14A3DB5-BEE5-4612-9F9C-62972B2C6C83",
+                "72DCCD9B-B71B-4B73-8A06-EC137C44F49E",
+                "161A6F24-66F6-41F9-BC7D-8BA8A949159A",
+                "4AF854D9-647E-4DB0-9219-AD78D64C058D");
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        else
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-            }
-
-            app.UseStatusCodePages();
-            app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapRazorPages();
-                endpoints.MapControllers();
-            });
+            app.UseExceptionHandler("/Error");
+            UploadTokens.Init(Configuration["LJ_TOKEN"], Configuration["WR_TOKEN"], Configuration["DR_TOKEN"], Configuration["GE_TOKEN"]);
         }
+        logger.LogInformation("TOKENS: LJ:{LJ} WR:{WR} DR:{DR} GE:{GE}",
+            DumpToken(UploadTokens.Instance.Ljubljana), 
+            DumpToken(UploadTokens.Instance.Wroclaw),
+            DumpToken(UploadTokens.Instance.Dresden), 
+            DumpToken(UploadTokens.Instance.Geneva));
+
+        app.UseStatusCodePages();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+
+        app.UseAuthorization();
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapRazorPages();
+            endpoints.MapControllers();
+        });
     }
 }
