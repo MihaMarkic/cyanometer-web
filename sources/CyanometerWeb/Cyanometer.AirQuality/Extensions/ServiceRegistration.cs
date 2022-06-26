@@ -13,6 +13,7 @@ namespace Cyanometer.AirQuality.Extensions
                 .AddSingleton<ArsoService>()
                 .AddSingleton<GiosAirQualityService>()
                 .AddSingleton<SabraAirQualityService>()
+                .AddSingleton<AqicnAirQualityService>()
                 .AddSingleton<AirQualityProcessor>();
         }
     }

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>Cyanometer.Web</AssemblyName>
+    <UserSecretsId>b5053f26-2ee6-44f9-88fe-bb367b9c675e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

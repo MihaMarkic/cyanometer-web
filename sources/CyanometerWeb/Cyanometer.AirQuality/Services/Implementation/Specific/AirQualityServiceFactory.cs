@@ -9,11 +9,14 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
         readonly ArsoService arsoService;
         readonly GiosAirQualityService giosService;
         readonly SabraAirQualityService sabraService;
-        public AirQualityServiceFactory(ArsoService arsoService, GiosAirQualityService giosService, SabraAirQualityService sabraService)
+        readonly AqicnAirQualityService aqicnService;
+        public AirQualityServiceFactory(ArsoService arsoService, GiosAirQualityService giosService, 
+            SabraAirQualityService sabraService, AqicnAirQualityService aqicnService)
         {
             this.arsoService = arsoService;
             this.giosService = giosService;
             this.sabraService = sabraService;
+            this.aqicnService = aqicnService;
         }
         public IAirQualityService GetService(AirQualitySource source) =>
             source switch
@@ -21,6 +24,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
                 AirQualitySource.Gios => giosService,
                 AirQualitySource.Arso => arsoService,
                 AirQualitySource.Sabra => sabraService,
+                AirQualitySource.Aqicn => aqicnService,
                 _ => throw new Exception($"Unsupported air quality source {source}")
             };
     }

@@ -3,12 +3,11 @@ using Cyanometer.AirQuality.Services.Implementation.Specific;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
 using NUnit.Framework;
-using System.Diagnostics.CodeAnalysis;
 using System.Xml.Linq;
 
 namespace Cyanometer.AirQualityTest.Services.Implementation;
 
-public class SabraAirQualityServiceTest: BaseTest<SabraAirQualityService>
+public partial class SabraAirQualityServiceTest: BaseTest<SabraAirQualityService>
 {
     static readonly string Root = Path.Combine("Samples", "Sabra");
     internal static string GetSampleContent(string file) => File.ReadAllText(Path.Combine(Root, file));
@@ -101,28 +100,6 @@ public class SabraAirQualityServiceTest: BaseTest<SabraAirQualityService>
                 SO2 = null,
             };
             Assert.That(actual, Is.EqualTo(expected).Using(AirQualityDataEqualityComparer.Default));
-        }
-    }
-
-    public class AirQualityDataEqualityComparer : IEqualityComparer<AirQualityData>
-    {
-        public static AirQualityDataEqualityComparer Default = new AirQualityDataEqualityComparer();
-        public bool Equals(AirQualityData? x, AirQualityData? y)
-        {
-            if (x is null && y is null)
-            {
-                return true;
-            }
-            if (x is null ^ y is null)
-            {
-                return false;
-            }
-            return x!.Date == y!.Date && x.NO2 == y.NO2 && x.O3 == y.O3 && x.PM10 == y.PM10 && x.SO2 == y.SO2;
-        }
-
-        public int GetHashCode([DisallowNull] AirQualityData obj)
-        {
-            return HashCode.Combine(obj.Date, obj.NO2, obj.O3, obj.PM10, obj.SO2);
         }
     }
 }

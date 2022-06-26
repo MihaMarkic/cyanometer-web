@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\appbuild.cake = ..\..\appbuild.cake
 		..\..\build.ps1 = ..\..\build.ps1
 		Dockerfile = Dockerfile
+		..\..\readme.md = ..\..\readme.md
 		..\..\version.xml = ..\..\version.xml
 	EndProjectSection
 EndProject
@@ -22,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cyanometer.WebTest", "Test\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F1DB46D4-6C40-4DFD-93FF-47F659F4CD2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyanometer.AirQualityTest", "Test\Cyanometer.AirQualityTest\Cyanometer.AirQualityTest.csproj", "{FA6A6D01-7A56-4505-8F53-8F7CD97FF8CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cyanometer.AirQualityTest", "Test\Cyanometer.AirQualityTest\Cyanometer.AirQualityTest.csproj", "{FA6A6D01-7A56-4505-8F53-8F7CD97FF8CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
