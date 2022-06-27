@@ -1,0 +1,2051 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<wfs:FeatureCollection xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wfs="http://www.opengis.net/wfs/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:luft_luftmessdaten="https:geoportal.umwelt.sachsen.de/arcgis/services/luft/luftmessdaten/MapServer/WFSServer" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timeStamp="2022-06-27T13:04:58Z" numberMatched="unknown"       numberReturned="48"             xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd https:geoportal.umwelt.sachsen.de/arcgis/services/luft/luftmessdaten/MapServer/WFSServer https://geoportal.umwelt.sachsen.de/arcgis/services/luft/luftmessdaten/MapServer/WFSServer?service=wfs%26version=2.0.0%26request=DescribeFeatureType">
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.1">
+      <luft_luftmessdaten:OBJECTID>1</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN080</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Schkeuditz</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>307587.09796481</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5697504.9181566</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>122</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Leipziger Str. 59
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>123.951</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>---</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>---</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.1.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.1.mp.0">
+              <gml:pos>5697504.918199999 307587.0980000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.2">
+      <luft_luftmessdaten:OBJECTID>2</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN004</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Bautzen</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>461114.89139674</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5669506.14820353</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>203</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Stieberstr. / Goethestr.</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>113.138</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>5.779</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.927</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.2.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.2.mp.0">
+              <gml:pos>5669506.1482 461114.8914000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.2.mp.1">
+              <gml:pos>5669506.1482 461114.8914000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.2.mp.2">
+              <gml:pos>5669506.1482 461114.8914000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.2.mp.3">
+              <gml:pos>5669506.1482 461114.8914000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.3">
+      <luft_luftmessdaten:OBJECTID>3</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN061</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Dresden-Nord</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>411808.8799545</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5657800.280722</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>112</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Schlesischer Platz</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>0.170</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>111.420</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>13.508</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>13.565</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>6.917</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.3.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.0">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.1">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.2">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.3">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.4">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.4">
+      <luft_luftmessdaten:OBJECTID>4</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN045</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Zittau-Ost</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>487538.93100373</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5637870.30982741</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>230</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Brückenstr. 12
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>106.963</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>11.462</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>0.500</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.393</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.4.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.0">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.1">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.2">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.3">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.4">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.5">
+      <luft_luftmessdaten:OBJECTID>5</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN025</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Leipzig-Mitte</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>317334.62581508</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5691365.3460046</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>110</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Willy-Brandt-Platz / Am Hallischen Tor</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>0.351</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>103.709</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>17.439</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>8.701</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>31.154</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>16.408</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.5.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.0">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.1">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.2">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.3">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.4">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.5">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.6">
+      <luft_luftmessdaten:OBJECTID>6</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN083</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Chemnitz-Leipziger Str.</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>352397.7523412</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5634765.33852395</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>327</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Leipziger Str. 109</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>15.316</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>30.885</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>11.582</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.6.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.6.mp.0">
+              <gml:pos>5634765.338500001 352397.7522999998</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.6.mp.1">
+              <gml:pos>5634765.338500001 352397.7522999998</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.6.mp.2">
+              <gml:pos>5634765.338500001 352397.7522999998</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.7">
+      <luft_luftmessdaten:OBJECTID>7</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN006</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Borna</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>324585.33032389</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5666723.1168719</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>145</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Sachsenallee 45</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>108.000</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>14.277</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>5.436</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.7.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.7.mp.0">
+              <gml:pos>5666723.116900001 324585.3302999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.7.mp.1">
+              <gml:pos>5666723.116900001 324585.3302999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.7.mp.2">
+              <gml:pos>5666723.116900001 324585.3302999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.8">
+      <luft_luftmessdaten:OBJECTID>8</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN079</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Niesky</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>482544.5032441</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5681588.41030565</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>148</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Sproitz, An der Aue
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>125.628</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>5.612</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.847</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.8.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.8.mp.0">
+              <gml:pos>5681588.4103 482544.5032000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.8.mp.1">
+              <gml:pos>5681588.4103 482544.5032000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.8.mp.2">
+              <gml:pos>5681588.4103 482544.5032000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.8.mp.3">
+              <gml:pos>5681588.4103 482544.5032000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.9">
+      <luft_luftmessdaten:OBJECTID>9</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN092</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Dresden-Winckelmannstraße</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>410973.65814295</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5654606.60175793</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>116</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Winckelmannstr. /Schnorrstr.
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>116.341</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>12.259</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>1.493</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>4.449</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.9.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.0">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.1">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.2">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.3">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.4">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.10">
+      <luft_luftmessdaten:OBJECTID>10</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN091</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Zwickau-Werdauer Str.</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>322592.13093602</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5621746.32417136</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>267</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Werdauer Str. / Crimmitschauer Str.</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>13.560</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>12.026</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>4.786</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.10.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.10.mp.0">
+              <gml:pos>5621746.324200001 322592.1309000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.10.mp.1">
+              <gml:pos>5621746.324200001 322592.1309000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.10.mp.2">
+              <gml:pos>5621746.324200001 322592.1309000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.11">
+      <luft_luftmessdaten:OBJECTID>11</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN024</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Klingenthal</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>319954.17076163</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5581136.2856581</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>540</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Graslitzer Str. (Parkpl.)</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>0.100</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>7.771</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>1.332</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>3.254</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.11.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.0">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.1">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.2">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.3">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.4">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.12">
+      <luft_luftmessdaten:OBJECTID>12</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN084</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Dresden-Bergstr.</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>411047.15208151</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5653514.88470579</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>150</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Bergstr. 78-80</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>104.043</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>12.826</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>21.429</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>17.836</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.12.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.12.mp.0">
+              <gml:pos>5653514.8847 411047.1520999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.12.mp.1">
+              <gml:pos>5653514.8847 411047.1520999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.12.mp.2">
+              <gml:pos>5653514.8847 411047.1520999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.12.mp.3">
+              <gml:pos>5653514.8847 411047.1520999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.13">
+      <luft_luftmessdaten:OBJECTID>13</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN052</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Zinnwald</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>411883.92868135</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5620708.17554875</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>877</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Hochmoorweg 7</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>127.907</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>3.005</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.078</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.13.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.13.mp.0">
+              <gml:pos>5620708.1755 411883.9287000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.13.mp.1">
+              <gml:pos>5620708.1755 411883.9287000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.13.mp.2">
+              <gml:pos>5620708.1755 411883.9287000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.13.mp.3">
+              <gml:pos>5620708.1755 411883.9287000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.14">
+      <luft_luftmessdaten:OBJECTID>14</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN049</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Carlsfeld</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>330341.35395467</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5589315.5208205</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>896</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Weitersglashütte 2a</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>-999</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>10.255</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>---</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>---</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.14.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.14.mp.0">
+              <gml:pos>5589315.5208 330341.3540000003</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.14.mp.1">
+              <gml:pos>5589315.5208 330341.3540000003</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.15">
+      <luft_luftmessdaten:OBJECTID>15</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN053</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Fichtelberg</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>354641.56420818</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5588275.2726705</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>1214</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Gipfelplateau (DWD)</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>112.716</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>0.500</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>---</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>---</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.15.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.15.mp.0">
+              <gml:pos>5588275.272700001 354641.5641999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.15.mp.1">
+              <gml:pos>5588275.272700001 354641.5641999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.16">
+      <luft_luftmessdaten:OBJECTID>16</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN020</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Görlitz</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>498176.23545851</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5667151.38969927</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>210</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Zeppelinstr. 10
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>0.311</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>9.767</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>1.482</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>17.939</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>9.286</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.16.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.0">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.1">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.2">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.3">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.4">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.17">
+      <luft_luftmessdaten:OBJECTID>17</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN059</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Leipzig-West</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>311672.70491023</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5688646.27260175</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>115</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        N.-Rumjanzew-Str. 100 / Schönauer Str.
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>118.978</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>7.672</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>4.989</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.17.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.17.mp.0">
+              <gml:pos>5688646.272600001 311672.7049000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.17.mp.1">
+              <gml:pos>5688646.272600001 311672.7049000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.17.mp.2">
+              <gml:pos>5688646.272600001 311672.7049000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.17.mp.3">
+              <gml:pos>5688646.272600001 311672.7049000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.18">
+      <luft_luftmessdaten:OBJECTID>18</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN093</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Brockau</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>302670.87327623</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5609979.67982175</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>430</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Elsterberger Straße 4</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>114.203</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>11.772</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.310</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.18.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.18.mp.0">
+              <gml:pos>5609979.6798 302670.8733000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.18.mp.1">
+              <gml:pos>5609979.6798 302670.8733000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.18.mp.2">
+              <gml:pos>5609979.6798 302670.8733000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.18.mp.3">
+              <gml:pos>5609979.6798 302670.8733000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.19">
+      <luft_luftmessdaten:OBJECTID>19</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN077</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Leipzig-Lützner Str.</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>314340.47514134</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5690551.92655474</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>110</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Lützner Str. 36</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>16.859</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>34.131</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>11.022</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.19.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.19.mp.0">
+              <gml:pos>5690551.9266 314340.4751000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.19.mp.1">
+              <gml:pos>5690551.9266 314340.4751000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.19.mp.2">
+              <gml:pos>5690551.9266 314340.4751000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.20">
+      <luft_luftmessdaten:OBJECTID>20</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN074</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Schwartenberg</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>391508.6795952</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5613041.93574805</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>785</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Neuhausen, Am Schwartenberg 10</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>invalid</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>130.591</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>13.682</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>6.900</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>5.107</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.20.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.0">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.1">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.2">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.3">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.4">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.5">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.21">
+      <luft_luftmessdaten:OBJECTID>21</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN001</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Annaberg-Buchholz</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>358181.41966029</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5604018.93578359</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>454</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Talstr. / Str. der Einheit</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>93.337</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>13.360</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>1.863</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>15.587</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>7.367</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.21.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.0">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.1">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.2">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.3">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.4">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.22">
+      <luft_luftmessdaten:OBJECTID>22</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN075</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Plauen-Süd</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>296982.40651206</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5596597.43283792</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>343</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Hofer Landstr. / Oelsnitzer Str.</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>14.808</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>12.011</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>4.728</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.22.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.22.mp.0">
+              <gml:pos>5596597.432800001 296982.4064999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.22.mp.1">
+              <gml:pos>5596597.432800001 296982.4064999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.22.mp.2">
+              <gml:pos>5596597.432800001 296982.4064999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.23">
+      <luft_luftmessdaten:OBJECTID>23</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN017</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Freiberg</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>383789.92461498</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5641818.56588628</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>393</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Helmertplatz</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>14.743</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>6.808</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.23.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.23.mp.0">
+              <gml:pos>5641818.5659 383789.9245999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.23.mp.1">
+              <gml:pos>5641818.5659 383789.9245999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.24">
+      <luft_luftmessdaten:OBJECTID>24</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN051</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Radebeul-Wahnsdorf</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>407265.28889323</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5663950.08808757</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>246</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Altwahnsdorf 12</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>122.747</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>12.032</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>3.863</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.24.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.24.mp.0">
+              <gml:pos>5663950.088099999 407265.2889</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.24.mp.1">
+              <gml:pos>5663950.088099999 407265.2889</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.24.mp.2">
+              <gml:pos>5663950.088099999 407265.2889</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.24.mp.3">
+              <gml:pos>5663950.088099999 407265.2889</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.1">
+      <luft_luftmessdaten:OBJECTID>1</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN080</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Schkeuditz</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>307587.09796481</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5697504.9181566</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>122</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Leipziger Str. 59
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>123.951</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>---</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>---</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.1.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.1.mp.0">
+              <gml:pos>5697504.918199999 307587.0980000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.2">
+      <luft_luftmessdaten:OBJECTID>2</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN004</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Bautzen</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>461114.89139674</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5669506.14820353</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>203</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Stieberstr. / Goethestr.</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>113.138</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>5.779</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.927</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.2.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.2.mp.0">
+              <gml:pos>5669506.1482 461114.8914000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.2.mp.1">
+              <gml:pos>5669506.1482 461114.8914000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.2.mp.2">
+              <gml:pos>5669506.1482 461114.8914000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.2.mp.3">
+              <gml:pos>5669506.1482 461114.8914000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.3">
+      <luft_luftmessdaten:OBJECTID>3</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN061</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Dresden-Nord</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>411808.8799545</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5657800.280722</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>112</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Schlesischer Platz</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>0.170</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>111.420</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>13.508</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>13.565</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>6.917</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.3.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.0">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.1">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.2">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.3">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.3.mp.4">
+              <gml:pos>5657800.2807 411808.8799999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.4">
+      <luft_luftmessdaten:OBJECTID>4</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN045</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Zittau-Ost</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>487538.93100373</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5637870.30982741</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>230</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Brückenstr. 12
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>106.963</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>11.462</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>0.500</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.393</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.4.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.0">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.1">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.2">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.3">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.4.mp.4">
+              <gml:pos>5637870.309800001 487538.9309999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.5">
+      <luft_luftmessdaten:OBJECTID>5</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN025</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Leipzig-Mitte</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>317334.62581508</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5691365.3460046</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>110</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Willy-Brandt-Platz / Am Hallischen Tor</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>0.351</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>103.709</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>17.439</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>8.701</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>31.154</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>16.408</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.5.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.0">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.1">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.2">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.3">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.4">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.5.mp.5">
+              <gml:pos>5691365.346000001 317334.6257999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.6">
+      <luft_luftmessdaten:OBJECTID>6</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN083</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Chemnitz-Leipziger Str.</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>352397.7523412</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5634765.33852395</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>327</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Leipziger Str. 109</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>15.316</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>30.885</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>11.582</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.6.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.6.mp.0">
+              <gml:pos>5634765.338500001 352397.7522999998</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.6.mp.1">
+              <gml:pos>5634765.338500001 352397.7522999998</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.6.mp.2">
+              <gml:pos>5634765.338500001 352397.7522999998</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.7">
+      <luft_luftmessdaten:OBJECTID>7</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN006</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Borna</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>324585.33032389</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5666723.1168719</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>145</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Sachsenallee 45</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>108.000</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>14.277</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>5.436</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.7.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.7.mp.0">
+              <gml:pos>5666723.116900001 324585.3302999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.7.mp.1">
+              <gml:pos>5666723.116900001 324585.3302999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.7.mp.2">
+              <gml:pos>5666723.116900001 324585.3302999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.8">
+      <luft_luftmessdaten:OBJECTID>8</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN079</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Niesky</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>482544.5032441</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5681588.41030565</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>148</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Sproitz, An der Aue
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>125.628</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>5.612</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.847</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.8.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.8.mp.0">
+              <gml:pos>5681588.4103 482544.5032000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.8.mp.1">
+              <gml:pos>5681588.4103 482544.5032000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.8.mp.2">
+              <gml:pos>5681588.4103 482544.5032000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.8.mp.3">
+              <gml:pos>5681588.4103 482544.5032000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.9">
+      <luft_luftmessdaten:OBJECTID>9</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN092</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Dresden-Winckelmannstraße</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>410973.65814295</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5654606.60175793</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>116</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Winckelmannstr. /Schnorrstr.
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>116.341</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>12.259</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>1.493</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>4.449</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.9.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.0">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.1">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.2">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.3">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.9.mp.4">
+              <gml:pos>5654606.6018 410973.6580999997</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.10">
+      <luft_luftmessdaten:OBJECTID>10</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN091</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Zwickau-Werdauer Str.</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>322592.13093602</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5621746.32417136</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>267</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Werdauer Str. / Crimmitschauer Str.</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>13.560</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>12.026</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>4.786</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.10.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.10.mp.0">
+              <gml:pos>5621746.324200001 322592.1309000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.10.mp.1">
+              <gml:pos>5621746.324200001 322592.1309000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.10.mp.2">
+              <gml:pos>5621746.324200001 322592.1309000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.11">
+      <luft_luftmessdaten:OBJECTID>11</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN024</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Klingenthal</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>319954.17076163</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5581136.2856581</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>540</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Graslitzer Str. (Parkpl.)</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>0.100</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>7.771</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>1.332</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>3.254</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.11.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.0">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.1">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.2">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.3">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.11.mp.4">
+              <gml:pos>5581136.285700001 319954.1708000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.12">
+      <luft_luftmessdaten:OBJECTID>12</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN084</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Dresden-Bergstr.</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>411047.15208151</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5653514.88470579</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>150</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Bergstr. 78-80</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>104.043</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>12.826</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>21.429</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>17.836</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.12.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.12.mp.0">
+              <gml:pos>5653514.8847 411047.1520999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.12.mp.1">
+              <gml:pos>5653514.8847 411047.1520999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.12.mp.2">
+              <gml:pos>5653514.8847 411047.1520999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.12.mp.3">
+              <gml:pos>5653514.8847 411047.1520999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.13">
+      <luft_luftmessdaten:OBJECTID>13</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN052</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Zinnwald</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>411883.92868135</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5620708.17554875</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>877</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Hochmoorweg 7</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>127.907</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>3.005</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.078</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.13.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.13.mp.0">
+              <gml:pos>5620708.1755 411883.9287000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.13.mp.1">
+              <gml:pos>5620708.1755 411883.9287000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.13.mp.2">
+              <gml:pos>5620708.1755 411883.9287000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.13.mp.3">
+              <gml:pos>5620708.1755 411883.9287000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.14">
+      <luft_luftmessdaten:OBJECTID>14</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN049</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Carlsfeld</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>330341.35395467</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5589315.5208205</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>896</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Weitersglashütte 2a</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>-999</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>10.255</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>---</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>---</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.14.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.14.mp.0">
+              <gml:pos>5589315.5208 330341.3540000003</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.14.mp.1">
+              <gml:pos>5589315.5208 330341.3540000003</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.15">
+      <luft_luftmessdaten:OBJECTID>15</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN053</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Fichtelberg</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>354641.56420818</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5588275.2726705</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>1214</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Gipfelplateau (DWD)</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>112.716</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>0.500</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>---</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>---</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.15.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.15.mp.0">
+              <gml:pos>5588275.272700001 354641.5641999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.15.mp.1">
+              <gml:pos>5588275.272700001 354641.5641999999</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.16">
+      <luft_luftmessdaten:OBJECTID>16</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN020</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Görlitz</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>498176.23545851</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5667151.38969927</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>210</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        Zeppelinstr. 10
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>0.311</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>9.767</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>1.482</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>17.939</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>9.286</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.16.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.0">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.1">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.2">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.3">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.16.mp.4">
+              <gml:pos>5667151.389699999 498176.2355000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.17">
+      <luft_luftmessdaten:OBJECTID>17</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN059</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Leipzig-West</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>311672.70491023</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5688646.27260175</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>115</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>
+        N.-Rumjanzew-Str. 100 / Schönauer Str.
+      </luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>118.978</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>7.672</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>4.989</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.17.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.17.mp.0">
+              <gml:pos>5688646.272600001 311672.7049000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.17.mp.1">
+              <gml:pos>5688646.272600001 311672.7049000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.17.mp.2">
+              <gml:pos>5688646.272600001 311672.7049000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.17.mp.3">
+              <gml:pos>5688646.272600001 311672.7049000002</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.18">
+      <luft_luftmessdaten:OBJECTID>18</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN093</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Brockau</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>302670.87327623</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5609979.67982175</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>430</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Elsterberger Straße 4</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>114.203</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>11.772</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>2.310</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.18.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.18.mp.0">
+              <gml:pos>5609979.6798 302670.8733000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.18.mp.1">
+              <gml:pos>5609979.6798 302670.8733000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.18.mp.2">
+              <gml:pos>5609979.6798 302670.8733000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.18.mp.3">
+              <gml:pos>5609979.6798 302670.8733000001</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.19">
+      <luft_luftmessdaten:OBJECTID>19</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN077</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Leipzig-Lützner Str.</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>314340.47514134</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5690551.92655474</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>110</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Lützner Str. 36</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>16.859</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>34.131</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>11.022</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.19.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.19.mp.0">
+              <gml:pos>5690551.9266 314340.4751000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.19.mp.1">
+              <gml:pos>5690551.9266 314340.4751000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.19.mp.2">
+              <gml:pos>5690551.9266 314340.4751000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.20">
+      <luft_luftmessdaten:OBJECTID>20</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN074</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Schwartenberg</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>391508.6795952</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5613041.93574805</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>785</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Neuhausen, Am Schwartenberg 10</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>invalid</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>130.591</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>13.682</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>6.900</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>5.107</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.20.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.0">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.1">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.2">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.3">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.4">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.20.mp.5">
+              <gml:pos>5613041.935699999 391508.6796000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.21">
+      <luft_luftmessdaten:OBJECTID>21</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN001</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Annaberg-Buchholz</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>358181.41966029</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5604018.93578359</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>454</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Talstr. / Str. der Einheit</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>93.337</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>13.360</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>1.863</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>15.587</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>7.367</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.21.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.0">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.1">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.2">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.3">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.21.mp.4">
+              <gml:pos>5604018.935799999 358181.4197000004</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.22">
+      <luft_luftmessdaten:OBJECTID>22</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN075</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Plauen-Süd</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>296982.40651206</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5596597.43283792</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>343</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Hofer Landstr. / Oelsnitzer Str.</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>14.808</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>12.011</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>4.728</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.22.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.22.mp.0">
+              <gml:pos>5596597.432800001 296982.4064999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.22.mp.1">
+              <gml:pos>5596597.432800001 296982.4064999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.22.mp.2">
+              <gml:pos>5596597.432800001 296982.4064999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.23">
+      <luft_luftmessdaten:OBJECTID>23</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN017</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Freiberg</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>383789.92461498</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5641818.56588628</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>393</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Helmertplatz</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>---</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>---</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>14.743</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>6.808</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.23.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.23.mp.0">
+              <gml:pos>5641818.5659 383789.9245999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.23.mp.1">
+              <gml:pos>5641818.5659 383789.9245999996</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+  <wfs:member>
+    <luft_luftmessdaten:Luftmessstationen gml:id="Luftmessstationen.24">
+      <luft_luftmessdaten:OBJECTID>24</luft_luftmessdaten:OBJECTID>
+      <luft_luftmessdaten:EU_CODE>DESN051</luft_luftmessdaten:EU_CODE>
+      <luft_luftmessdaten:DATUM>2022-06-27T00:00:00</luft_luftmessdaten:DATUM>
+      <luft_luftmessdaten:MESSZEIT>14:00</luft_luftmessdaten:MESSZEIT>
+      <luft_luftmessdaten:STATIONSNAME>Radebeul-Wahnsdorf</luft_luftmessdaten:STATIONSNAME>
+      <luft_luftmessdaten:RW>407265.28889323</luft_luftmessdaten:RW>
+      <luft_luftmessdaten:HW>5663950.08808757</luft_luftmessdaten:HW>
+      <luft_luftmessdaten:HOEHE>246</luft_luftmessdaten:HOEHE>
+      <luft_luftmessdaten:STANDORT>Altwahnsdorf 12</luft_luftmessdaten:STANDORT>
+      <luft_luftmessdaten:BENZOL>---</luft_luftmessdaten:BENZOL>
+      <luft_luftmessdaten:OZON>122.747</luft_luftmessdaten:OZON>
+      <luft_luftmessdaten:PM10>12.032</luft_luftmessdaten:PM10>
+      <luft_luftmessdaten:SCHWEFELDIOXID>---</luft_luftmessdaten:SCHWEFELDIOXID>
+      <luft_luftmessdaten:STICKSTOFFDIOXID>3.863</luft_luftmessdaten:STICKSTOFFDIOXID>
+      <luft_luftmessdaten:STICKSTOFFMONOXID>1.000</luft_luftmessdaten:STICKSTOFFMONOXID>
+      <luft_luftmessdaten:SHAPE>
+        <gml:MultiPoint gml:id="Luftmessstationen.24.mp" srsName="urn:ogc:def:crs:EPSG::25833">
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.24.mp.0">
+              <gml:pos>5663950.088099999 407265.2889</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.24.mp.1">
+              <gml:pos>5663950.088099999 407265.2889</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.24.mp.2">
+              <gml:pos>5663950.088099999 407265.2889</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+          <gml:pointMember>
+            <gml:Point gml:id="Luftmessstationen.24.mp.3">
+              <gml:pos>5663950.088099999 407265.2889</gml:pos>
+            </gml:Point>
+          </gml:pointMember>
+        </gml:MultiPoint>
+      </luft_luftmessdaten:SHAPE>
+    </luft_luftmessdaten:Luftmessstationen>
+  </wfs:member>
+</wfs:FeatureCollection>

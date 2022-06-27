@@ -5,6 +5,7 @@ using Flurl;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -30,25 +31,44 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
             }
             var result = await cache.GetOrCreateAsync(CacheKeys.ArsoData, async ce =>
             {
-                logger.LogInformation("Starting retrieving arso data");
+                logger.LogInformation("Starting retrieving Dresden data");
                 try
                 {
                     XDocument doc = await GetDataAsync(ct);
                     ce.SetAbsoluteExpiration(TimeSpan.FromMinutes(5));
-                    return ParseData(doc, locationId);
+                    return ParseData(logger, doc, locationId);
                 }
                 catch (Exception ex)
                 {
-                    logger.LogError(ex, "Failed retrieving arso data for some reason");
+                    logger.LogError(ex, "Failed retrieving Dresden data for some reason");
                     throw;
                 }
             });
             return result;
         }
-
-        public AirQualityData ParseData(XDocument doc, string stationCode)
+        public static DateTime GetDate(string date, string time)
         {
-            throw new NotImplementedException();
+            string properDate = $"{date.Split('T')[0]}T{time}:00";
+            return DateTime.Parse(properDate);
+        }
+        public static AirQualityData ParseData(ILogger logger, XDocument doc, string stationCode)
+        {
+            var wfs = XNamespace.Get("http://www.opengis.net/wfs/2.0");
+            var luftLuftmessdaten = XNamespace.Get("https:geoportal.umwelt.sachsen.de/arcgis/services/luft/luftmessdaten/MapServer/WFSServer");
+            var result = doc!.Root
+                .Elements().Where(e => e.Name == wfs + "member")
+                .Elements().Where(e => e.Name == (luftLuftmessdaten + "Luftmessstationen")
+                     && e.Elements().Where(e => e.Name == (luftLuftmessdaten + "EU_CODE") && e.Value == "DESN092").Any())
+                .Select(e => new AirQualityData
+                {
+                    Date = GetDate(e.Element(luftLuftmessdaten + "DATUM").Value, e.Element(luftLuftmessdaten + "MESSZEIT").Value),
+                    O3 = GetDoubleValue(logger, e.Element(luftLuftmessdaten + "OZON")),
+                    PM10 = GetDoubleValue(logger, e.Element(luftLuftmessdaten + "PM10")),
+                    NO2 = GetDoubleValue(logger, e.Element(luftLuftmessdaten + "STICKSTOFFDIOXID")),
+                    SO2 = GetDoubleValue(logger, e.Element(luftLuftmessdaten + "SCHWEFELDIOXID")),
+                })
+                .FirstOrDefault();
+            return result;
         }
 
         public async Task<XDocument> GetDataAsync(CancellationToken ct)

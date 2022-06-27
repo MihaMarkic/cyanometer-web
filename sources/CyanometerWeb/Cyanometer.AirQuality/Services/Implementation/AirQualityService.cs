@@ -18,7 +18,8 @@ namespace Cyanometer.AirQuality.Services.Implementation
             this.baseUrl = baseUrl;
         }
 
-        public double? GetDoubleValue(XElement element)
+        public double? GetDoubleValue(XElement element) => GetDoubleValue(logger, element);
+        public static double? GetDoubleValue(ILogger logger, XElement element)
         {
             try
             {

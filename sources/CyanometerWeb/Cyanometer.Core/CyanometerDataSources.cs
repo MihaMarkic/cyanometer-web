@@ -27,7 +27,7 @@ namespace Cyanometer.Core
                 .Add(Wroclaw, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Wroclaw), "Poland", "Wroclaw", 
                     AirQualitySource.Gios, Wroclaw, "University-Library", airQualityLocation: null))
                 .Add(Dresden, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Dresden), "Germany", "Dresden",
-                    AirQualitySource.Aqicn, Dresden, "Technical-Museum", airQualityLocation: "DESN083"))
+                    AirQualitySource.Sachsen, Dresden, "Technical-Museum", airQualityLocation: "DESN092"))
                 .Add(Geneva, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Geneva), "Switzerland", "Geneva",
                     AirQualitySource.Sabra, Geneva, "History-And-Science-Museum", airQualityLocation: null));
         }
