@@ -13,7 +13,7 @@
   {
     "outputFileName": "wwwroot/js/location.min.js",
     "inputFiles": [
-      "wwwroot/js/location.js"
+      "wwwroot/js/location1.js"
     ],
     "minify": {
       "enabled": true,
