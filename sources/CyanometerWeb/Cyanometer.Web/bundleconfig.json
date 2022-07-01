@@ -44,7 +44,7 @@
     "sourceMap": false
   },
   {
-    "outputFileName": "wwwroot/css/site.min.css",
+    "outputFileName": "wwwroot/css/site.1.min.css",
     "inputFiles": [
       "wwwroot/css/app.css",
       "wwwroot/css/common.css",
