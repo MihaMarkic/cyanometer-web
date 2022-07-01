@@ -76,7 +76,14 @@ namespace Cyanometer.Web.Services.Implementation
             using (var image = Image.Load<Rgba32>(stream))
             using (var thumb = image.Clone())
             {
-                thumb.Mutate(x => x.Resize(800, 600));
+                // also crops to avoid including random objects on the edge of the photo
+                // factor determines the crop ratio. Factor 2 means it crops out 50% of image
+                float factor = 2;
+                const int thumbWidth = 800;
+                const int thumbHeight = 600;
+                thumb.Mutate(x => x
+                    .Resize((int)(thumbWidth * factor), (int)(thumbHeight * factor))
+                    .Crop(new Rectangle((int)(thumbWidth / factor / 2), (int)(thumbWidth / factor / 2), thumbWidth, thumbHeight)));
                 var colors = CollectColors(thumb);
                 var info = new ImageInfo(
                                 takenAt,
