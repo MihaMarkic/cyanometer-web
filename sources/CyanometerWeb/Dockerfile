@@ -19,9 +19,9 @@ RUN dotnet publish "Cyanometer.Web.csproj" -c Release -o /app/publish
 FROM base AS final
 # install slovene language
 # won't work on Alpine
-#RUN apt clean && apt -y update && apt install -y locales && locale-gen sl_SI.UTF-8 && locale -a \
-#	&& apt clean
-# && localedef -i sl_SI -c -f UTF-8 -A /usr/share/locale/locale.alias sl_SI.UTF-8 && LANG sl_SI.utf8 
+RUN apt clean && apt -y update && apt install -y locales && locale-gen de_DE.UTF-8 && locale -a \
+	&& apt clean
+#    && localedef -i sl_SI -c -f UTF-8 -A /usr/share/locale/locale.alias sl_SI.UTF-8 && LANG sl_SI.utf8 
 WORKDIR /app
 COPY --from=publish /app/publish .
 # use non-root user

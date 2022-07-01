@@ -23,11 +23,11 @@ namespace Cyanometer.Web.Api
         public ActionResult<ImageItem[]> Get()
         {
             DateTimeOffset now;
-#if DEBUG
-            now = new DateTimeOffset(2017, 08, 03, 12, 12, 12, TimeSpan.Zero);
-#else
+//#if DEBUG
+//            now = new DateTimeOffset(2017, 08, 03, 12, 12, 12, TimeSpan.Zero);
+//#else
             now = DateTimeOffset.Now;
-#endif
+//#endif
             var query = from s in CyanometerDataSources.Default.Data.Values
                         let m = imagesManager.GetOlderImagesThan(s, now).Cast<ImageMeta?>().FirstOrDefault()
                         where m.HasValue

@@ -82,7 +82,7 @@ public class SabraAirQualityService : IAirQualityService
 
     public static DateTime GetDate(ILogger logger, XElement root)
     {
-        return DateTime.Parse((string)root.Attribute("ende"), new CultureInfo("ch"));
+        return DateTime.Parse((string)root.Attribute("ende"), new CultureInfo("de_DE"));
     }
 
     public async Task<XDocument> GetDataAsync(CancellationToken ct)
