@@ -78,7 +78,7 @@ namespace Cyanometer.Web.Services.Implementation
             {
                 // also crops to avoid including random objects on the edge of the photo
                 // factor determines the crop ratio. Factor 2 means it crops out 50% of image
-                float factor = 2;
+                float factor = 2.3f;
                 const int thumbWidth = 800;
                 const int thumbHeight = 600;
                 thumb.Mutate(x => x

@@ -49,11 +49,11 @@ namespace Cyanometer.Web.Api
             if (dataSource != null)
             {
                 DateTimeOffset now;
-#if DEBUG
-                now = new DateTimeOffset(2017, 08, 03, 12, 12, 12, TimeSpan.Zero);                
-#else
+                //#if DEBUG
+                //now = new DateTimeOffset(2017, 08, 03, 12, 12, 12, TimeSpan.Zero);                
+                //#else
                 now = DateTimeOffset.Now;
-#endif
+                //#endif
                 var lastImages = imagesManager.GetOlderImagesThan(dataSource, now).Take(12);
                 var query = from m in lastImages
                             select new ImageItem(
