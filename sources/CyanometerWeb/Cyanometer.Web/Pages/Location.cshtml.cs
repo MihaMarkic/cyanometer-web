@@ -51,44 +51,59 @@ namespace Cyanometer.Web.Pages
             var service = airQualityServiceFactory.GetService(cyanometerDataSource.AirQualitySource);
             AirQualitySource = service.DataSourceInfo;
             AirQualityLink = service.DataSourceUri;
-            AirQualityPollutionCalculated calculated = await memoryCache.GetOrCreateAsync(key, async entry =>
+            AirQualityPollutionCalculated? calculated = await memoryCache.GetOrCreateAsync(key, async entry =>
             {
-                var rawPollution = await service.GetIndexAsync(cyanometerDataSource.AirQualityLocation, CancellationToken.None);
-                calculated = airQualityProcessor.Calculate(rawPollution);
-                entry.SetAbsoluteExpiration(DateTimeOffset.Now.AddMinutes(15));
-                return calculated;
+                try
+                {
+                    var rawPollution = await service.GetIndexAsync(cyanometerDataSource.AirQualityLocation, CancellationToken.None);
+                    calculated = airQualityProcessor.Calculate(rawPollution);
+                    entry.SetAbsoluteExpiration(DateTimeOffset.Now.AddMinutes(15));
+                    return calculated;
+                }
+                catch (Exception)
+                {
+                    entry.SetAbsoluteExpiration(DateTimeOffset.Now.AddSeconds(1));
+                    return null;
+                }
             });
-            PollutionMeasurement = calculated.PollutionWeight != AirPollution.Low ? calculated.ChiefPollutant.ToString(): "LOW";
-            PollutionColor = calculated.PollutionWeight switch
+            if (calculated is not null)
             {
-                AirPollution.Low => "72B22F",
-                AirPollution.Mid => "FEF10D",
-                AirPollution.High => "F17E19",
-                AirPollution.VeryHigh => "E4001C",
-                _ => ""
-            };
-            PollutionText = calculated.PollutionWeight switch
+                PollutionMeasurement = calculated.PollutionWeight != AirPollution.Low ? calculated.ChiefPollutant.ToString() : "LOW";
+                PollutionColor = calculated.PollutionWeight switch
+                {
+                    AirPollution.Low => "72B22F",
+                    AirPollution.Mid => "FEF10D",
+                    AirPollution.High => "F17E19",
+                    AirPollution.VeryHigh => "E4001C",
+                    _ => ""
+                };
+                PollutionText = calculated.PollutionWeight switch
+                {
+                    AirPollution.Low => "LOW",
+                    AirPollution.Mid => "MODERATE",
+                    AirPollution.High => "HIGH",
+                    AirPollution.VeryHigh => "VERY HIGH",
+                    _ => "UNKNOWN"
+                };
+                LevelsText = calculated.ChiefPollutant switch
+                {
+                    Measurement.NO2 => "NITROGEN DIOXIDE",
+                    Measurement.SO2 => "SULFUR DIOXIDE",
+                    Measurement.O3 => "OZONE",
+                    Measurement.PM10 => "PARTICLES",
+                    _ => ""
+                };
+                Pollution = new Pollution(
+                    FromDouble(calculated.Data.O3),
+                    FromDouble(calculated.Data.PM10),
+                    FromDouble(calculated.Data.SO2),
+                    FromDouble(calculated.Data.NO2)
+                );
+            }
+            else
             {
-                AirPollution.Low => "LOW",
-                AirPollution.Mid => "MODERATE",
-                AirPollution.High => "HIGH",
-                AirPollution.VeryHigh => "VERY HIGH",
-                _ => "UNKNOWN"
-            };
-            LevelsText = calculated.ChiefPollutant switch
-            {
-                Measurement.NO2 => "NITROGEN DIOXIDE",
-                Measurement.SO2 => "SULFUR DIOXIDE",
-                Measurement.O3 => "OZONE",
-                Measurement.PM10 => "PARTICLES",
-                _ => ""
-            };
-            Pollution = new Pollution(
-                FromDouble(calculated.Data.O3), 
-                FromDouble(calculated.Data.PM10), 
-                FromDouble(calculated.Data.SO2),
-                FromDouble(calculated.Data.NO2)
-            );
+                Pollution = new Pollution(null, null, null, null);
+            }
             return Page();
         }
 

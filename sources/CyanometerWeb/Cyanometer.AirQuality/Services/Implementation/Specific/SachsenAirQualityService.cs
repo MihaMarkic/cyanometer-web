@@ -29,7 +29,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
             {
                 throw new ArgumentNullException(nameof(locationId));
             }
-            var result = await cache.GetOrCreateAsync(CacheKeys.ArsoData, async ce =>
+            var result = await cache.GetOrCreateAsync(CacheKeys.SachsenData, async ce =>
             {
                 logger.LogInformation("Starting retrieving Dresden data");
                 try

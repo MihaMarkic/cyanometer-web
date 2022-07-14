@@ -26,7 +26,7 @@ public class AqicnAirQualityService : AirQualityService, IAirQualityService
 
     public async Task<AirQualityData> GetIndexAsync(string locationId, CancellationToken ct)
     {
-        var result = await cache.GetOrCreateAsync(CacheKeys.SabreData, async ce =>
+        var result = await cache.GetOrCreateAsync(CacheKeys.AqicnData, async ce =>
         {
             logger.LogInformation("Starting retrieving SABRE data");
             try
