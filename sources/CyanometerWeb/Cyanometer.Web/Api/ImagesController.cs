@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
+using SixLabors.ImageSharp;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -77,7 +78,6 @@ namespace Cyanometer.Web.Api
 
         [HttpPost]
         [Route("{country}/{city}")]
-        //[DisableFormValueModelBinding]
         public async Task<IActionResult> PostFiles()
         {
             try
@@ -149,7 +149,12 @@ namespace Cyanometer.Web.Api
                                     try
                                     {
                                         logger.LogDebug($"Saving image {contentDisposition.FileName.Value}");
-                                        imagesManager.SaveImage(dataSource, contentDisposition.FileName.Value, streamedFileContent);
+                                        Rectangle? crop = null;
+                                        if (country == "germany" && city == "dresden")
+                                        {
+                                            crop = new Rectangle(40, 10, 30, 30);
+                                        }
+                                        imagesManager.SaveImage(dataSource, contentDisposition.FileName.Value, streamedFileContent, crop);
                                     }
                                     catch (Exception ex)
                                     {

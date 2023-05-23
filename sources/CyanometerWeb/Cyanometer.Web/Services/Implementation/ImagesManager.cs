@@ -68,7 +68,7 @@ namespace Cyanometer.Web.Services.Implementation
                 now.Year.ToString("0000"), now.Month.ToString("00"), now.Day.ToString("00"));
         }
 
-        public void SaveImage(CyanometerDataSource source, string fileName, Stream stream)
+        public void SaveImage(CyanometerDataSource source, string fileName, Stream stream, Rectangle? crop = null)
         {
             string safeFileName = Path.GetFileName(fileName);
             DateTimeOffset takenAt = DateFromFileName(safeFileName);
@@ -76,6 +76,15 @@ namespace Cyanometer.Web.Services.Implementation
             using (var image = Image.Load<Rgba32>(stream))
             using (var thumb = image.Clone())
             {
+                if (crop.HasValue)
+                {
+                    var cropPixels = new Rectangle(
+                        crop.Value.X * image.Width / 100,
+                        crop.Value.Y * image.Height / 100,
+                        crop.Value.Width * image.Width / 100,
+                        crop.Value.Width * image.Height / 100);
+                    image.Mutate(i => i.Crop(cropPixels));
+                }
                 // also crops to avoid including random objects on the edge of the photo
                 // factor determines the crop ratio. Factor 2 means it crops out 50% of image
                 float factor = 2.3f;
