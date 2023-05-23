@@ -39,7 +39,7 @@ function loadImage(image, target, count) {
     var takenAt = moment.utc(image.takenAt).format(dateMask);
     $(`<img src="${path}"></img>`).on('load', function () {
         var div = $(`
-<div class='cyan-display-main landing-image' style="background-image:url('${path}')" onclick="handleLocationClick('${image.city}','${image.country}')">
+<div class='cyan-display-main landing-image' style="background-image:url('${path}')" onclick="handleLocationClick('${image.cityUrl}','${image.country}')">
             <div class="time">
                 <span>${image.city}, ${image.country}</span>
                 <br/>
