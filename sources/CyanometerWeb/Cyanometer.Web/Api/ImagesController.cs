@@ -1,4 +1,8 @@
-﻿using Cyanometer.AirQuality.Services.Implementation.Specific;
+﻿using System;
+using System.Collections.Immutable;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using Cyanometer.Core;
 using Cyanometer.Web.Models;
 using Cyanometer.Web.Services.Abstract;
@@ -6,21 +10,10 @@ using Cyanometer.Web.Utilities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
 using SixLabors.ImageSharp;
-using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Cyanometer.Web.Api
 {
@@ -62,6 +55,7 @@ namespace Cyanometer.Web.Api
                                      url: m.ImageUriPath,
                                      thumbnailUrl: m.ThumbnailUriPath,
                                      city: city,
+                                     cityUrl: city.Split(' ')[0],
                                      country: country,
                                      id: 146649,
                                      bluenessIndex: m.BluenessIndex

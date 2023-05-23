@@ -36,6 +36,7 @@ namespace Cyanometer.Web.Api
                                  url: m.Value.ImageUriPath,
                                  thumbnailUrl: m.Value.ThumbnailUriPath,
                                  city: s.City,
+                                 cityUrl: s.City.Split(' ')[0],
                                  country: s.Country,
                                  id: 146649,
                                  bluenessIndex: m.Value.BluenessIndex
