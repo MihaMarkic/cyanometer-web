@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text.Json;
 
 namespace Cyanometer.Web.Services.Implementation
@@ -68,22 +69,41 @@ namespace Cyanometer.Web.Services.Implementation
                 now.Year.ToString("0000"), now.Month.ToString("00"), now.Day.ToString("00"));
         }
 
-        public void SaveImage(CyanometerDataSource source, string fileName, Stream stream)
+        public void SaveImage(CyanometerDataSource source, string fileName, Stream stream, Rectangle? crop = null)
         {
             string safeFileName = Path.GetFileName(fileName);
             DateTimeOffset takenAt = DateFromFileName(safeFileName);
             logger.LogDebug($"File date is {takenAt}");
+            const int thumbWidth = 800;
+            const int thumbHeight = 600;
             using (var image = Image.Load<Rgba32>(stream))
             using (var thumb = image.Clone())
             {
-                // also crops to avoid including random objects on the edge of the photo
-                // factor determines the crop ratio. Factor 2 means it crops out 50% of image
-                float factor = 2.3f;
-                const int thumbWidth = 800;
-                const int thumbHeight = 600;
-                thumb.Mutate(x => x
-                    .Resize((int)(thumbWidth * factor), (int)(thumbHeight * factor))
-                    .Crop(new Rectangle((int)(thumbWidth / factor / 2), (int)(thumbWidth / factor / 2), thumbWidth, thumbHeight)));
+                if (crop.HasValue)
+                {
+                    var cropPixels = new Rectangle(
+                        crop.Value.X * image.Width / 100,
+                        crop.Value.Y * image.Height / 100,
+                        crop.Value.Width * image.Width / 100,
+                        crop.Value.Width * image.Height / 100);
+                    image.Mutate(i => i.Crop(cropPixels));
+                    var thumbCropPixels = new Rectangle(
+                        crop.Value.X * thumb.Width / 100,
+                        crop.Value.Y * thumb.Height / 100,
+                        crop.Value.Width * thumb.Width / 100,
+                        crop.Value.Width * thumb.Height / 100);
+                    thumb.Mutate(i => i.Crop(thumbCropPixels)
+                        .Resize(thumbWidth, thumbHeight));
+                }
+                else
+                {
+                    // also crops to avoid including random objects on the edge of the photo
+                    // factor determines the crop ratio. Factor 2 means it crops out 50% of image
+                    float factor = 2.3f;
+                    thumb.Mutate(x => x
+                        .Resize((int)(thumbWidth * factor), (int)(thumbHeight * factor))
+                        .Crop(new Rectangle((int)(thumbWidth / factor / 2), (int)(thumbWidth / factor / 2), thumbWidth, thumbHeight)));
+                }
                 var colors = CollectColors(thumb);
                 var info = new ImageInfo(
                                 takenAt,

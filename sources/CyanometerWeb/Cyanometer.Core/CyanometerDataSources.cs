@@ -15,7 +15,7 @@ namespace Cyanometer.Core
     {
         public const string Wroclaw = "poland/wroclaw";
         public const string Ljubljana = "slovenia/ljubljana";
-        public const string Dresden = "germany/dresden";
+        public const string Millstatt = "austria/millstatt";
         public const string Geneva = "switzerland/geneva";
         public static CyanometerDataSources Default { get; } = new CyanometerDataSources();
         public ImmutableDictionary<string, CyanometerDataSource> Data { get; }
@@ -26,8 +26,8 @@ namespace Cyanometer.Core
                     AirQualitySource.Arso, Ljubljana, "Central-Square", airQualityLocation: "E403"))
                 .Add(Wroclaw, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Wroclaw), "Poland", "Wroclaw", 
                     AirQualitySource.Gios, Wroclaw, "University-Library", airQualityLocation: null))
-                .Add(Dresden, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Dresden), "Germany", "Dresden",
-                    AirQualitySource.Sachsen, Dresden, "Technical-Museum", airQualityLocation: "DESN092"))
+                .Add(Millstatt, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Millstatt), "Austria", "Millstatt am See",
+                    AirQualitySource.Sachsen, Millstatt, "Technical-Museum", airQualityLocation: "DESN092"))
                 .Add(Geneva, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Geneva), "Switzerland", "Geneva",
                     AirQualitySource.Sabra, Geneva, "History-And-Science-Museum", airQualityLocation: null));
         }

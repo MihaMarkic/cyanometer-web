@@ -71,7 +71,7 @@ public class Startup
         logger.LogInformation("TOKENS: LJ:{LJ} WR:{WR} DR:{DR} GE:{GE}",
             DumpToken(UploadTokens.Instance.Ljubljana), 
             DumpToken(UploadTokens.Instance.Wroclaw),
-            DumpToken(UploadTokens.Instance.Dresden), 
+            DumpToken(UploadTokens.Instance.Millstatt), 
             DumpToken(UploadTokens.Instance.Geneva));
 
         app.UseStatusCodePages();
