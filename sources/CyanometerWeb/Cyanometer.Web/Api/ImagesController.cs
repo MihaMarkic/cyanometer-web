@@ -146,7 +146,7 @@ namespace Cyanometer.Web.Api
                                         Rectangle? crop = null;
                                         if (country.Equals("austria", StringComparison.OrdinalIgnoreCase))
                                         {
-                                            crop = new Rectangle(40, 10, 30, 30);
+                                            crop = new Rectangle(40, 20, 30, 30);
                                         }
                                         imagesManager.SaveImage(dataSource, contentDisposition.FileName.Value, streamedFileContent, crop);
                                     }
