@@ -1,5 +1,6 @@
 ﻿using Cyanometer.AirQuality.Services.Implementation;
 using Cyanometer.AirQuality.Services.Implementation.Specific;
+using Cyanometer.AirQualityTest.Services.Implementation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Cyanometer.AirQuality.Extensions
@@ -15,6 +16,7 @@ namespace Cyanometer.AirQuality.Extensions
                 .AddSingleton<SabraAirQualityService>()
                 .AddSingleton<AqicnAirQualityService>()
                 .AddSingleton<SachsenAirQualityService>()
+                .AddSingleton<UmweltKtnGvAtAirQualityService>()
                 .AddSingleton<AirQualityProcessor>();
         }
     }

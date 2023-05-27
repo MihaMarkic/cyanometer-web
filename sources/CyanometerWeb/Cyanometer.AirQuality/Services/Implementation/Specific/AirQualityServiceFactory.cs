@@ -1,4 +1,5 @@
 ﻿using Cyanometer.AirQuality.Services.Abstract;
+using Cyanometer.AirQualityTest.Services.Implementation;
 using Cyanometer.Core;
 using System;
 
@@ -11,14 +12,17 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
         readonly SabraAirQualityService sabraService;
         readonly AqicnAirQualityService aqicnService;
         readonly SachsenAirQualityService sachsenService;
+        readonly UmweltKtnGvAtAirQualityService umweltKtnGvAtService;
         public AirQualityServiceFactory(ArsoService arsoService, GiosAirQualityService giosService, 
-            SabraAirQualityService sabraService, AqicnAirQualityService aqicnService, SachsenAirQualityService sachsenService)
+            SabraAirQualityService sabraService, AqicnAirQualityService aqicnService, SachsenAirQualityService sachsenService,
+            UmweltKtnGvAtAirQualityService umweltKtnGvAtService)
         {
             this.arsoService = arsoService;
             this.giosService = giosService;
             this.sabraService = sabraService;
             this.aqicnService = aqicnService;
             this.sachsenService = sachsenService;
+            this.umweltKtnGvAtService = umweltKtnGvAtService;
         }
         public IAirQualityService GetService(AirQualitySource source) =>
             source switch
@@ -28,6 +32,7 @@ namespace Cyanometer.AirQuality.Services.Implementation.Specific
                 AirQualitySource.Sabra => sabraService,
                 AirQualitySource.Aqicn => aqicnService,
                 AirQualitySource.Sachsen => sachsenService,
+                AirQualitySource.UmweltKtnGvAt => umweltKtnGvAtService,
                 _ => throw new Exception($"Unsupported air quality source {source}")
             };
     }
