@@ -22,7 +22,7 @@ namespace Cyanometer.Core
         CyanometerDataSources()
         {
             Data = ImmutableDictionary.Create<string, CyanometerDataSource>(StringComparer.OrdinalIgnoreCase)
-                .Add(Ljubljana, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Ljubljana), "Slovenia", "Ljubljana", 
+                .Add(Ljubljana, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Ljubljana), "Slovenia", "Ljubljana",
                     AirQualitySource.Arso, Ljubljana, "Central-Square", airQualityLocation: "E403"))
                 .Add(Wroclaw, new CyanometerDataSource(Guid.Parse(UploadTokens.Instance.Wroclaw), "Poland", "Wroclaw", 
                     AirQualitySource.Gios, Wroclaw, "University-Library", airQualityLocation: null))

@@ -15,7 +15,7 @@ namespace Cyanometer.AirQualityTest.Services.Implementation
     public class UmweltKtnGvAtAirQualityService : AirQualityService, IAirQualityService
     {
         public string DataSourceInfo => "umwelt.ktn.gv.at";
-        public string DataSourceUri => "http://www.umwelt.ktn.gv.at/luft/online/Daten/AtelierPrusnik/AtelierPrusnik.txt";
+        public string DataSourceUri => "http://www.umwelt.ktn.gv.at";
         public UmweltKtnGvAtAirQualityService(ILogger<UmweltKtnGvAtAirQualityService> logger, ICyanoHttpClient client) 
             : base(logger, client, "http://www.umwelt.ktn.gv.at/luft/online/Daten")
         {
@@ -174,7 +174,7 @@ namespace Cyanometer.AirQualityTest.Services.Implementation
         }
         public async Task<string[]> GetDataAsync(CancellationToken ct)
         {
-            string content = await client.GetAsync(DataSourceUri);
+            string content = await client.GetAsync("http://www.umwelt.ktn.gv.at/luft/online/Daten/AtelierPrusnik/AtelierPrusnik.txt");
             if (content != null)
             {
                 return content.Split("\r\n");
